@@ -160,34 +160,113 @@ Y a continuación el valor del margin-bottom para que el border esté a suficien
 
 ### Clases y Selectores
 
-Ahora que ya tenemos nuestras variables para nuestro H2, nos damos cuenta que habrá otros H2 (son selectores)que van a ser diferentes en estilo.
+Ahora que ya tenemos nuestras variables para nuestro H2, nos damos cuenta que habrá otros H2 que van a ser diferentes en estilo.
 Para dichos H2 podemos crear una clase caracteristica. Por ejemplo habrá borders que usen un color diferente.
-Vamos a usar por ahora una clase llamada border_with_background para dicho caso.
+Vamos a usar por ahora una clase llamada border_white para dicho caso.
 
-En nuestro Markup definimos Selectores, y en el CSS definimos las variables para nuestro selectores y clases.
-Podemos usar varias clases en el markup separandolos con un espacio en blanco.
+Podemos usar varias clases en el markup separandolos con un espacio en blanco. Desde el CSS se accede a ellos con el punto.
 
-* Clases: Son cómo tags para dar una categoria. Tipo Taxonomías en Drupal o Tags en Facebook.
-* Selectores: Sirven para seleccionar desde CSS a elementos que quieras estilar. Pueden ser clases, id's, elementos, atributos, etc.
+* Clases: Son cómo tags para dar una categoria. Tipo Taxonomías en Drupal o Tags en Facebook. Lo complicado es saber usar un nombre adecuado.
+* Selectores: Sirven para seleccionar desde CSS a elementos que quieras estilar. 
+  Pueden ser clases (.border), id's (#name), elementos (h2), atributos. Podemos combinarlos.
+  Al principio es muy dificil saber que selector necesitamos. Hay veces que hay que usar un Selector, y ya mas adelante tenemos que 
+  cambiarlo ya que nos damos cuenta que no era el correcto.
 
-https://www.w3schools.com/cssref/css_selectors.asp
+[Listado de Selectores y manera de combinarlos](https://www.w3schools.com/cssref/css_selectors.asp)
 
-Para seleccionar
+Ej.)
 
+Para seleccionar (usamos espacio)
 ```
 <p class="border full"></p>
 ```
 
-podemos usar:
-
+podemos usar (sin espacio)
 ```
 .border.full{
 }
 ```
 
+## Secciones
+
+Primero debemos Identificar Secciones en el diseño: Al hacer zoom out del diseño puedes ver más fácilmente las cajas del diseño.
+
+Para hacer secciones en html usamos el tag `section` en vez del `div`
+
+[Sections en mozilla.org](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section)
+
+Importante: 
+ - No se debe usar `section` para aplicar estilos
+ - Se usa `section` para los Screen Readers, para generar un buen Outline
+ 
+[Sobre Sections en HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines)
+ 
+## Cálculo de Margin y Padding
+
+Ver `13-margin-padding.html`
+Ver `video t3.13`
+
+ - El background sólo se aplica dentro del border (padding). No se aplica al margin
+ - El margin nada mas dice el espacio que va a haber entre elementos
+ - Para padding left y right esta fácil aplicarlo a la clase de la sección si no hay margenes definidos en los elementos interiores.
+ - Calculo de Padding cuando hay un margin interior:
+   - Necesitamos un padding-top de 54 pixeles (entre el Section y el H2)
+   - Pero ya hay un margin-top definido en el H2 de unos 28px (es el valor por defecto en Chrome)
+   - Por ello tenemos que aplicar 26px (28px + 26px = 54px)
+ - Es importante saber que si Section no tiene un padding, no se va a ver el margin de los elementos interiores.
+ - En cuanto aplicas un padding de 1px, elementos interiores de repente se van a ver con el margen aplicado.
+ 
+## Padding Shorthand:
+
+Normalmente el padding superior e inferior tienen el mismo valor. Si no lo tienen quizás sea porque el diseñador hizo algo mal.
+
+Sobre Padding Shorthand:
+Ej.)
+```
+padding-left: 121px;
+padding-right: 121px;
+padding-top: 26px;
+padding-bottom: 26px;
+```
+
+equivale a:
+```
+padding: 26px 121px 26px 121px;
+```
+
+que equivale a:
+```
+padding: 26px 121px;
+```         
+            
+## Siguientes conversiones: Más Headings
+
+Una vez realizado los Heading y los Selectores hay que ver que mas vamos a estilar.
+Vemos que seguimos teniendo muchos Headers para ser pasados por Frontend. Seguimos por ese camino pues.
+Para ir en orden vamos a empezar por los Headers superiores, hasta llegar hasta los de abajo
+
+Volvemos a hacer lo mismo que en el primer paso: volvemos a hacer un screenshot del Header, y lo metemos dentro del markup temporalmente.
+Ahora desde el navegador jugamos con los estilos para ver que cambios hay que realizar.
+Aplicamos text-align:left; text-transform:none y aplicamos el font-size correcto.
+Para obtener el font-size deberíamos comparar letras grandes (Por ejmplo la "M" o la "L").
+Una vez que tenemos el font-size aplicamos el font-weight: 200;
+Para no caer en errores de font-weight aplicamos un background parecido al del diseño.
+Y ya que esté correcto el color aplicamos el letter-spacing, si vemos que hay que ajustarlo todavia podemos bajarle un pixel a la font-size.
 
 
-t3.9 v47
+TODO: Aplicar estilos yo mismo (V55)
+
+            
+ 
+t3.18 v56
+
+
+
+TODO: 49
+
+
+
+
 
 
 
