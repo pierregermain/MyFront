@@ -1,0 +1,29 @@
+.section_hero-title {
+    font-family: sans-serif;
+    font-size: 34px;
+    font-weight: normal;
+    color: #7A7A7A;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    border-bottom: solid 1px #DDDDDD;
+    padding-bottom: 30px;
+    margin-bottom: 32px;
+}
+.section_hero {
+    background-color: #E8E8E8;
+    padding: 26px 121px;
+}
+.section_hero > .section_hero-title {
+    border-bottom-color: #F5F5F5;
+}
+.slide {
+    background-color: #525B5E;
+    padding: 3px;
+}
+.slide > .slide-title {
+    font-family: sans-serif;
+    font-size: 39px;
+    font-weight: 500;
+    color: white;
+}

@@ -196,7 +196,7 @@ Para hacer secciones en html usamos el tag `section` en vez del `div`
 [Sections en mozilla.org](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section)
 
 Importante: 
- - No se debe usar `section` para aplicar estilos
+ - No se debe usar `section` para aplicar estilos: Para ello usaremos clases. Concretamente podemos usar "compound classes" tipo `section-name.class-name`
  - Se usa `section` para los Screen Readers, para generar un buen Outline
  
 [Sobre Sections en HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines)
@@ -241,11 +241,14 @@ padding: 26px 121px;
             
 ## Siguientes conversiones: Más Headings
 
+Ver `02-Slider-Heading/*`
+
 Una vez realizado los Heading y los Selectores hay que ver que mas vamos a estilar.
 Vemos que seguimos teniendo muchos Headers para ser pasados por Frontend. Seguimos por ese camino pues.
 Para ir en orden vamos a empezar por los Headers superiores, hasta llegar hasta los de abajo
 
 Volvemos a hacer lo mismo que en el primer paso: volvemos a hacer un screenshot del Header, y lo metemos dentro del markup temporalmente.
+(va ser el Header del Slider)
 Ahora desde el navegador jugamos con los estilos para ver que cambios hay que realizar.
 Aplicamos text-align:left; text-transform:none y aplicamos el font-size correcto.
 Para obtener el font-size deberíamos comparar letras grandes (Por ejmplo la "M" o la "L").
@@ -253,17 +256,227 @@ Una vez que tenemos el font-size aplicamos el font-weight: 200;
 Para no caer en errores de font-weight aplicamos un background parecido al del diseño.
 Y ya que esté correcto el color aplicamos el letter-spacing, si vemos que hay que ajustarlo todavia podemos bajarle un pixel a la font-size.
 
+Eso nos da el siguiente estilazo:
 
-TODO: Aplicar estilos yo mismo (V55)
+```
+text-align: left;
+text-transform: none;
+font-size: 39px;
+font-weight: 500;
+background-color: #525B5E;
+color: white;
+letter-spacing: 0;
+```
 
-            
+## Búsqueda del nombre característicos para una clase
+
+Ahora tenemos que pensar a ver donde aplicamos este estilo para ese Header del Slider
+Por ahora vamos a poder acceder a dicho H2 con la clase `slider-heading`.
+El background se lo aplicamos al wrapper del H2 que es la section con clase `slide` 
+ya que no tendría sentido sólo aplicarlo al H2.
+
+Además le aplicamos un poco de padding al `slide` de forma provisional.
+Al aplicar el padding vemos que el H2 tenía estilos escondidos que tendremos que sobreesribir.
+
+Por ejemplo al H2 hay que quitarle el borde inferior. Aplicamos lo siguiente a su clase:
+
+```
+border: none;
+padding: initial;
+margin: initial;
+```
+
+El *initial* lo que hace es aplicar los estilos por defecto (estilos del navegador web)
+    
+
+## Sobre clases por defecto
+
+Quizás te das cuenta que no es tan buena idea darle estilos directamente a H2, sobre todo si no se va a usar en todo el sitio web.
+
+## Selectores con Hijos (Compound Selector)
+
+Ver `16-compound-selector.html`
+
+En el caso de nuestros H2 dentro de las secciones, estos toman estilos dependiendo del padre.
+
+Entonces para acceder a ellos desde el CSS podemos usar:
+`.slide h2` y `.section h2`
+
+Acceder de esta forma depende siempre de si el elemento al que accedes siempre va o no a tener ese estilo y si además se usa en otro lado.
+
+### Selectores Hijos
+
+`.slide h2` accede a todos los h2 dentro de .slide. Es decir accedería a todos estos h2:
+
+```
+<div class="slide>
+   <h2> Si </h2>
+   <div> 
+     <h2> Si </h2>
+   </div>
+</div>
+ ```
  
-t3.18 v56
+En cambio `.slide > h2` accede sólo a los h2 direcatemente hijos de .slide (pero no los nietos).    
+
+```
+<div class="slide>
+   <h2> Si </h2>
+   <div> 
+     <h2> No </h2>
+   </div>
+</div>
+ ```
+ 
+Cuando puedas usa el Selector Hijo con ">" ya que es mas eficiente que el espacio en blanco
+
+## Reglas CSS
+
+1. Orden de Aplicación
+
+ - El orden importa, no es lo mismo aplicar un color al H2 al principio del Css que al final. Siempre el último valor aplicado tiene más prioridad que al principio
+ - Tiene más prioridad el estilo aplicado directamente al markup (con la propiedad style)que dentro de los css.
+ 
+2. Especialización:
+
+Ej.) El selector .section h2 tiene más poder que el selector h2 
+
+En caso de empate entre Especialización y Orden de Aplicación siempre gana la Especialización
+
+## Organización básica de CSS
+
+Primero empezamos a definir selectores sueltos (globales) y vamos a ir especializando cada vez mas nuestros selectores
+
+## Importar Css
+
+Ya hemos visto que podemos usar CSS desde dentro del HTML de dos formas: Una desde el Head en el tag syle y otra directamente desde el markup.
+Pero hay una tercera forma de usar CSS y es importandolo desde ficheros externos.
+
+Para ello declaramos desde el head lo siguiente:
+
+`<link href="css/styles.css" rel="stylesheet" type="text/css"/>`
+
+Mas info sobre [link](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link)
+
+## Modificación de CSS desde Navegadores
+
+ - En Firefox vas a Inspect Element > Style Editor y le das al botón Save
+ - En Chrome vamos a Inspeccionar > Sources . Ahi vamos a "arrastrar" nuestro workspace, Chrome te preguntará si estás seguro.
+ 
+En ambos casos con Ctr + S podras guardar los cambios desde el propio navegador. Además en Chrome puedes modificar el HTML.
+
+
+## Evitar tanto override
+
+Hay varias formas:
+ - una clase por cada tipo de estilo dentro del elemento o contenedor
+ 
+## Hacer el CSS longterm
+
+ - intentar no usar selectores de elementos (H2) para estilos.
+ - mejor usar selectores de clases.
+ - así si cambia la estructura del documento no se rompen los estilos.
+ 
+ 
+## CSS Semántico con clases
+
+Para usar por ejemplo una clase título dentro de un slide podriamos usar este nombre:
+
+`slide_principal-title`
+
+Para usar una clase para un título de una sección general usaríamos:
+
+`section_hero-title`
+
+Si te fijas el `dash "-"` nos separa elementos padre e hijo. 
+En cambio `_` solamente es una especie de Camel Case en Css.
+
+### Cambio de nuestro CSS a Semántico
+
+Ver `18-semantic-classes`
+
+Ya no usamos H2 para el estilo: Al cambiar el markup de H2 a H5 por ejemplo los estilos ya no se rompen
+
+# Organización de CSS con SMACSS
+
+Página oficial: [smacss: Scalable and Modular Architecture for CSS](https://smacss.com/)
+
+Recomendación: Leer el libro oficial
+
+Ya hemos visto ejemplos de clase_padre-clase_hijo
+
+
+## Componentes (o Módulos) en CSS y HTML
+
+ - En SMACSS los contenedores (cómo secciones) se llaman módulos (en otros sistemas los llaman componentes)
+ - En Drupal vamos a llamar a dichos contenedores "componentes" para no usar la nomenclatura "módulo"
+ - La idea es que un componente podamos reusarlo y que se pueda mover de un sitio a otro en la web para poder ser reusado
+
+### Subcomponentes (ó Submódulos)
+
+Ver `02-subcomponentes.html`
+
+ - Son componentes iguales que otros pero que tienen alguna cosa diferente
+ - SMACSS dice que debemos tomar el nombre característico y agregarle otro nombre característico
+ 
+ EJ) componente_principal--clase_alternativa
+ 
+ Con "--" hacemos la distinción de subcomponente
+ 
+ 
+## Siguientes conversiones: Más Headings
+
+Ahora vamos a fijarnos en el siguiente Heading a ser estilado. Vamos a decidirnos por un H3 dentro de una sección.
+Volvemos a meter en nuestro markup una imagen del resultado.
+
+Podemos ir editando directamente desde nuestro navegador, podemos ir copiando estilos que ya hemos usado anteriormente.
+
+Nuestro Css va ser
+
+```
+.icon_box{
+    background-color: #e8e8e8;
+}
+.icon_box-title{
+    font-family: sans-serif;
+    font-size: 26px;
+    font-weight: 100;
+    color: #7A7A7A;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+```
+
+Una vez aplicado a un elemento creamos los demás elementos para replicar los estilos, 
+pero realmente no hace falta replicarlos hasta tener un componente bien realizado.
+
+## Line-height
+ 
+Una vez que tengas tus headings estilados toca estilar los paragráfos (p).
+Vamos a estilar el paragraph del slider.
+
+Volvemos a dejar en nuestro markup un screenshot de lo que queremos conseguir (Heading y Paragraph).
+Para un paragraph no suele ser común usar una clase de estilo, nada mas en casos especiales.
+
+Cuando te pones a estilar un paragraph, mira a ver si en todo el diseño se cumple lo que vas a realizar.
+
+En cuanto al line-height se define con porcentajes, pero es bueno con el pixel ruler ver si se ha aplicado bien (después de haber definido el font-size).
+
+### Sobre Margins
+
+Notas Iportantes sobre margenes:
+
+ - El Margin se ve afectado con el line-height
+ - Entre dos objetos se computa el margen mayor
+
+## Más paragraphs
+
+A esta altura conviene ver si se repiten colores. En tal caso usaremos el mismo para todos los Headers + Paragraphs.
 
 
 
-TODO: 49
-
+t4.13 v85
 
 
 
