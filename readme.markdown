@@ -89,7 +89,7 @@ Primer elegimos la *font-family*: Preferentemente una que no haya que bajarse de
  - Sans Serif (moderno, sin los picos) vs. Serif (con los picos, oldshool)
  Ej) font-family: sans-serif
  
-Después elegimos la *font-style* y *font-size*.
+Después elegimos la *font-style* (italic por ejemplo) y *font-size*.
 
 Finalmente solemos aplicar la *font-weight*
 
@@ -472,11 +472,71 @@ Notas Iportantes sobre margenes:
 
 ## Más paragraphs
 
-A esta altura conviene ver si se repiten colores. En tal caso usaremos el mismo para todos los Headers + Paragraphs.
+A esta altura conviene ver si se repiten colores. En tal caso usaremos el mismo color para todos los Headers + Paragraphs (por ahora copiando y pegando). Nos ponemos a estilar el primer paragraph
+
+Una vez estilado el primer paragraph vamos con el siguiente paragraph dentro de otro componente.
+
+El siguiente paragraph vemos que tiene un estilo totalmente diferente a los paragraphs normales, 
+entonces le damos una clase y lo estilamos usando el selector ">".
+
+Ya que tengamos estilado el paragraph estilamos los márgenes desde los títulos a los paragraphs.
+
+
+## Trucos para estilar un anchor
+
+Un Anchor tiene de especial que puede tener varios estados:
+
+```
+a:link
+a:visited
+a:hover
+a:active
+```
+
+## Uso del mismo CSS para varios selectores
+
+Para acceder a varias clases a la vez usamos la coma ","
+
+Ejemplo: Acceder a varios estados del anchor dentro de la case testimony
+
+```
+.testimony > a,
+.testimony > a:hover,
+.testimony > a:visited,
+.testimony > a:link,
+.testimony > a:active,{
+    color: #626262;
+}
+```
+
+## Reducción de Repetición
+
+En cuanto ves que están copiando muchas veces colores / margenes etc. date cuenta que deberías estar no repitiéndote.
+Veremos que con SASS es fácil quitar repeticiones.
+
+# Reseteando
+
+Vemos en nuestro css que se repite muchas veces `font-family: sans serif`, entonces deberíamos cambiar el font-family por defecto de nuestro navegador.
+
+```
+body {
+  font-family: sans-serif;
+}
+```
+
+Por ejemplo para *font-weight* no podemos usar el método anterior ya que el propio navegador sobreescribe el valor del H3 dentro del Body.
+
+## Selector Universal *
+
+Para el *font-weight* podriamos usar el selector universal, pero tampoco es recomendable porque se sobreesribirían TODOS los elementos de la página.
+Puede tener implicaciones por ejemplo en el rendimiento.
+
+
+## Standard Color Palette
 
 
 
-t4.13 v85
+t5.3 v90
 
 
 
