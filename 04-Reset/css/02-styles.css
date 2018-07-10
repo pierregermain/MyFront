@@ -1,5 +1,9 @@
 body {
     font-family: sans-serif;
+    color: #626262;
+}
+h2, h3 {
+    font-weight: 100;
 }
 .section_hero-title {
     font-size: 34px;
@@ -46,7 +50,6 @@ body {
     letter-spacing: 1px;
 }
 .icon_box > p {
-    color: #626262;
     font-size: 14px;
     line-height: 150%;
     padding: 8px;
@@ -54,20 +57,12 @@ body {
 .testimony-title {
     font-size: 24px;
     font-weight: 100;
-    color: #a7a7a7;
     margin-bottom: 17px;
 }
 .testimony > p {
-    color: #626262;
     font-size: 14px;
     line-height: 170%;
-
 }
 .testimony-attribution {
     font-style: italic;
-}
-
-.testimony-attribution > a,
-.testimony-attribution > a:hover {
-    color: #626262;
 }

@@ -534,9 +534,79 @@ Puede tener implicaciones por ejemplo en el rendimiento.
 
 ## Standard Color Palette
 
+Vemos que estamos usando varios colores en nuestro proyecto. Vemos que los grises del paragraph y los headers son MUY parecidos.
+Entonces muchas veces podemos asumir que el color usado en estos es el mismo (y que en realidad fue un error del diseñador que vamos a asumir).
+Hacer eso hará nuestro código mucha más manejable en el futuro.
+
+## Valores por defecto
+
+No deberíamos usar el Selector Universal ya que el propio navegador aplica estilos por defecto que nos pueden ahorrar mucho trabajo en el futuro.
+Es mejor poner por decto valores para el "body" y a continuación para otro elementos específicos.
+
+```
+body {
+    font-family: sans-serif;
+    color: #626262;
+}
+h2, h3 {
+    font-weight: 100;
+}
+```
+## Sobre tipografías genéricas
+
+( ... TODO: t5.5 )
+
+## CSS Reset
+
+Hay varias herramientas para resetear css para hacerlo compatible multiplataforma.
+
+Ej.) Eric Meyer's Reset CSS 2.0
 
 
-t5.3 v90
+### Universal Selector Reset
+
+link: https://cssreset.com
+
+
+```
+* {
+	margin: 0;
+	padding: 0;
+}
+```
+
+Eso hace que para todo navegador vamos a tener el mismo margin y padding. 
+Eso significa que para cada elemento vamos a necesitar definir el padding y margin de forma manual.
+
+### Eric Meyer's Reset
+
+Link Código Fuente: https://meyerweb.com/eric/tools/css/reset/
+
+Aplica a un montón de elementos el siguiente estilo:
+
+```
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+```
+
+A elementos de HTML 5 aplica `display:block` para que funcionen en navegadores antiguos.
+
+Aplica un `line-height` por defecto al `body` ya que dicho valor cambia mucho entre uno y otro navegador.
+
+Quita estilos a listas de tipo `ol` y `ul`.
+
+También quita estilos a otros elementos.
+
+## Pros y Contras de usar Resets
+
+
+
+t5.10 v98
+
 
 
 
