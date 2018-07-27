@@ -603,9 +603,109 @@ También quita estilos a otros elementos.
 
 ## Pros y Contras de usar Resets
 
+Pros: Eliminar CSS por defecto, no usar elementos por su estilo, compatibilidad entre navegadores
+Cons: Necesitas conocer todas las propiedades css
+
+## Normalize.css
+
+Archivo Css que va ser interpretado por el navegador. 
+Si vimos que los resets dejan todo a cero, el normalize lo que hace es solo modificar algunos estilos.
+El archivo normalize siempre es mas grande que el de reset. El normalize da soporte a navegadores antiguos. Muchas empresas usan normalize.css
+
+### Instalación de Normalize.css
+
+`Ver 05-Normalize`
+
+Necesitamos el normalize.css y simplemente lo importamos arriba del todo en nuestro html. Verás que ciertos márgenes que te creaba el navegador por defecto han desaparecido.
+Habrá sentencias que ya no necesites aplicar, por ejemplo la font al body ahora se aplica al html.
+
+## Package Manager
+
+Es bueno usarlo para gestionar versiones / dependencias.
+Usaremos "Bower" basado en "Node". Bower es un package Manager para Herramientas de Frontend.
+ 
+### Instalación de Bower (ya no se debe usar)
+
+https://bower.io/#install-bower
+
+Se instala con npm (node package manager)
+
+`npm install -g bower`
+
+Alternativamente deberíamos mejor usar `webpack` https://webpack.js.org/
+
+### Instalación de paquetes con bower
+
+Ver `06-Bower`
+
+Ejemplo:
+`bower install normalize.css` para instalar última versión de normalize.css
+
+Al ejecutarlo nos instala a parte de otros este fichero: `normalize/.bower.json`
+
+En dicho fichero se encuentra la versión usada del paquete
+
+### Sobre versiones
+
+Ejemplo:
+2.3.4
+donde 2 es la versión (si cambia API)
+donde 3 es el update (nuevas funciones, no cambia API)
+donde 4 es el parche (solo deberia arreglar cosas)
+
+### Creación del bower.json file
+
+Ahí metemos las dependencias de nuestro proyecto. Para crearlo hacemos `bower init`, nos irá preguntando cosas para crear el fichero:
+
+```
+{
+  name: '06-Bower-Test',
+  authors: [
+    'Pierre Germain'
+  ],
+  description: 'testing bower',
+  private: true,
+  ignore: [
+    '**/.*',
+    'node_modules',
+    'bower_components',
+    'test',
+    'tests'
+  ],
+  dependencies: {
+    'normalize.css': '^8.0.0'
+  }
+}
+```
+
+### Bower y versiones semánticas
+
+https://github.com/npm/node-semver#x-ranges-12x-1x-12-
+
+Sobre versiones: https://github.com/dbrock/semver-howto
+
+```
+"1.3.2" igual a 1.3.2
+
+">=1.3.2" mayor o igual a 1.3.2
+"<1.3.2" menor que 1.3.2
+
+// * es nuestro joker
+"1.3.*" Mayor o igual que 1.3.0, menor que 1.4.0
+
+// ~ Permite al último digito especifiado aumentar
+"~1.3.2" Mayor o igual que 1.3.2 y menor que 1.4.0
+"~1.3" Mayor o igual que 1.3.0 y menor que 2.0.0
+
+// ^ No permite cambiar de version mayor pero si de versión intermedia
+"^1.3.2" Mayor o igual que 1.3.2 y menor que 2.0.0
+"^0.3.2" Mayor o igual que 0.3.2 y menor que 0.4.0 (Al no ser que la versión mayor sea mayor que 0)
+
+```
 
 
-t5.10 v98
+
+t6.1 v110
 
 
 
