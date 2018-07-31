@@ -703,9 +703,51 @@ Sobre versiones: https://github.com/dbrock/semver-howto
 
 ```
 
+# Unidades CSS
+
+## Relativo vs. Absoluto
+
+Los pixeles son absolutos. Los relativos se basan sobre los absolutos. 
+Es bueno usar medidas relativas cuando sabemos que estas van a cambiar si cambia la relacionada absoluta. 
+Por ejemplo el line-height depende directamente del font-size, entonces es bueno usar porcentajes en en lineheight.
+
+## Em's
+
+Se calcula basado en el elemento padre. Un *em* equivale a 100%.
+
+## Rem's
+
+Se calcula basado sobre el tamaño del navegador.
+
+Ejemplo: Cálculo de em's
+
+Tamaño 100% = 14px
+Si queremos 16px hacemos 16/14 = 1.14
+Si queremos 12px hacemos 12/14 = 0.85 
+
+Al ser medio complicadillo usar rem's se aconseja usar pixeles y que hay un proceso posterior que traduzca los pixeles en rem's
+
+## Uniteless
+
+Cuando sea posible es mejor usar uniteless numbers ya que dan menos errores al reordenar elementos en el markup.
+
+Por ejemplo es mejor usar:
+line-height: 1.1
+que
+line-height: 10%
+
+# Compatibilidad de Navegadores
+
+www.caniuse.com
+
+Un porcentaje de un 90% para arriba es brutalmente bueno
 
 
-t6.1 v110
+tODO: leer https://www.codeproject.com/Articles/369858/Writing-polyfills-in-Javascript
+
+
+
+t10. v120
 
 
 
