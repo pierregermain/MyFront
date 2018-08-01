@@ -742,12 +742,75 @@ www.caniuse.com
 
 Un porcentaje de un 90% para arriba es brutalmente bueno
 
+## Polyfills
 
-tODO: leer https://www.codeproject.com/Articles/369858/Writing-polyfills-in-Javascript
+En JS podemos usar Polyfills para hacer compatible nuevas funcionalidades para navegadores antiguos.
+
+Para CSS tenemos `Houdini`.
+
+ - Sirve para tener acceso al engine del CSS, al engine de del navegador. Wow!
+ 
+ 
+# Sass
+
+Ayuda a usar lógica más avanzada que en CSS usando nombre de variables y eleminando repetición.
+
+## Sass vs. Less
+
+Sass es el más usado por ahora en el mundo de Drupal.
+
+## Instalación
+
+Hay varias formas de instalarlo. Recomendamos usar la instalación por terminal.
+
+Info sobre instalación: http://sass-lang.com/install
+En linux/nodejs hacemos `npm install -g sass`
+
+## Sintaxis Scss
+
+Para compilar:
+
+`sass input.scss output.css`
+
+Lo bueno de usar sintaxis scss es que es compatible al 100% con la sintaxis css.
+Eso significa que podemos renombrar sin miedo un fichero css a scss.
+
+Ver `06-Sass/*`
+
+### Creación y uso de Variables
+
+```
+$gris-obscuro: #6D6D6D;
+$gris-medio: #DADADA;
+$gris-ligero: #e8e8e8;
+$blanco: white;
+```
+
+luego para usarlo:
+
+`color: $gris-obscuro;`
+
+### Comentarios en Sass
+
+```
+// Comentario de una línea
+/* Comentario 
+ de dos líneas
+ */
+```
+
+### Sass watch
+
+Para compilado automático :)
+
+`sass --watch input.scss:output.css`
+
+TODO: Wrapping up ... 7.13
 
 
 
-t10. v120
+
+t7.14 v.132
 
 
 
