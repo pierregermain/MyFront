@@ -22,7 +22,6 @@ h2, h3 {
   background-color: #e8e8e8;
   padding: 26px 121px;
 }
-
 .section_hero--alt > .section_hero-title {
   border-bottom-color: #e8e8e8;
 }
@@ -31,14 +30,12 @@ h2, h3 {
   background-color: #6D6D6D;
   padding: 3px;
 }
-
 .slide > .slide-title {
   font-size: 39px;
   font-weight: 500;
   color: white;
   line-height: 150%;
 }
-
 .slide > p {
   color: white;
   font-weight: 100;
@@ -48,7 +45,11 @@ h2, h3 {
 .icon_box {
   background-color: #e8e8e8;
 }
-
+.icon_box > p {
+  font-size: 14px;
+  line-height: 150%;
+  padding: 8px;
+}
 .icon_box-title {
   font-size: 26px;
   font-weight: 100;
@@ -58,25 +59,23 @@ h2, h3 {
   letter-spacing: 1px;
 }
 
-.icon_box > p {
+.testimony > p {
   font-size: 14px;
-  line-height: 150%;
-  padding: 8px;
+  line-height: 170%;
 }
-
 .testimony-title {
   font-size: 24px;
   font-weight: 100;
   margin-bottom: 17px;
 }
-
-.testimony > p {
-  font-size: 14px;
-  line-height: 170%;
-}
-
 .testimony-attribution {
   font-style: italic;
+}
+.testimony-attribution > a {
+  color: #6D6D6D;
+}
+.testimony-attribution > a:hover, .testimony-attribution > a:visited, .testimony-attribution > a:link, .testimony-attribution > a:active {
+  color: #6D6D6D;
 }
 
 /*# sourceMappingURL=styles.css.map */

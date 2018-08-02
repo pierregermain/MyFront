@@ -807,30 +807,101 @@ Para compilado automático :)
 
 TODO: Wrapping up ... 7.13
 
+## Nesting vs. SMACSS
+
+Con Sass podemos usar Nesting, que va un poco contra SMACSS, pero en muchos casos es preferible usar Nesting y a la hora de compilar se va a crear el SMACSS.
+
+Ejemplo:
+En Css teníamos
+```
+.section_hero--alt {
+  background-color: $light-gray;
+  padding: 26px 121px;
+}
+.section_hero--alt > .section_hero-title {
+  border-bottom-color: $light-gray;
+}
+```
+Ahora en Sass se convierte a
+```
+.section_hero--alt {
+  background-color: $light-gray;
+  padding: 26px 121px;
+  > .section_hero-title {
+  border-bottom-color: $light-gray;
+}
+```
+
+## Componentes
+
+Cada componente debe tener su propio fichero. 
+Al principio de va dar huevo seguir eso, pero a largo plazo vas a ver que hacerlo así ganarás en mantenimiento del proyecto.
+
+
+# Organización de Proyectos con Sass
+
+
+## Uso del & en Sass con Smacss
+
+El operador `&` en Sass nos permite usar SMACSS
+
+Ejemplo:
+
+En CSS:
+```
+.icon_box {
+  background-color: #e8e8e8;
+}
+.icon_box-title {
+  font-size: 26px;
+}
+```
+En Sass:
+```
+.icon_box {
+  background-color: #e8e8e8;
+  &-title {
+  font-size: 26px;
+}
+```
+que nos genera el CSS correctamente anteponiendo el string `.icon_box` al `-title` tal cómo se había definido en el CSS.
+
+## Eficiencia
+
+Es bueno echarle un ojo al CSS que te genera Sass para ver si es eficiente y correcto (sobre todo al principio)
+
+## Reducir repetición
+
+Ejemplo: Anchor
+
+
+En Css
+```
+.testimony-attribution > a,
+.testimony-attribution > a:hover,
+.testimony-attribution > a:visited,
+.testimony-attribution > a:link,
+.testimony-attribution > a:active {
+  color: $dark-gray;
+}
+```
+
+pasa a ser en Sass
+
+```
+.testimony {
+ &-attribution {
+ > a {
+   color: $dark-gray;
+   &:hover, &:visited, &:link, &:active {
+    color: $dark-gray;
+   }
+ }
+}
+```
+
+con la ventaja de poder ir metiendole mas css entremedias.
 
 
 
-t7.14 v.132
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+t8.4 v.137

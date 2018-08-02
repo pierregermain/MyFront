@@ -1,74 +1,89 @@
-// colors
+// Colores
 $dark-gray: #6D6D6D;
 $medium-gray: #DADADA;
 $light-gray: #e8e8e8;
 $white: white;
 
+// Tipografía
+$default-font-weight: 100;
 
+// Elementos HTML por defecto
 body {
-    color: $dark-gray;
+  color: $dark-gray;
 }
 h2, h3 {
-    font-weight: 100;
+  font-weight: $default-font-weight;
 }
+
+// Componentes
 .section_hero-title {
-    font-size: 34px;
-    font-weight: normal;
-    color: #7A7A7A;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 3px;
-    border-bottom: solid 1px $medium-gray;
-    padding-bottom: 30px;
-    margin-bottom: 32px;
+  font-size: 34px;
+  font-weight: normal;
+  color: #7A7A7A;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px; // TODO: Make relative
+  border-bottom: solid 1px $medium-gray;
+  padding-bottom: 30px;
+  margin-bottom: 32px;
 }
 .section_hero--alt {
-    background-color: $light-gray;
-    padding: 26px 121px;
-}
-.section_hero--alt > .section_hero-title {
+  background-color: $light-gray;
+  padding: 26px 121px;
+  > .section_hero-title {
     border-bottom-color: $light-gray;
+  }
 }
+
 .slide {
-    background-color: $dark-gray;
-    padding: 3px;
-}
-.slide > .slide-title {
+  background-color: $dark-gray;
+  padding: 3px;
+  > .slide-title {
     font-size: 39px;
     font-weight: 500;
     color: $white;
     line-height: 150%;
-}
-.slide > p {
+  }
+  > p {
     color: $white;
-    font-weight: 100;
+    font-weight: $default-font-weight;
     font-size: 20px;
+  }
 }
+
 .icon_box {
-    background-color: #e8e8e8;
-}
-.icon_box-title {
+  background-color: #e8e8e8;
+  > p { // TODO: Unify paragraph styles
+    font-size: 14px;
+    line-height: 150%;
+    padding: 8px;
+  }
+  &-title {
     font-size: 26px;
-    font-weight: 100;
+    font-weight: $default-font-weight;
     color: $dark-gray;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
+  }
 }
-.icon_box > p {
-    font-size: 14px;
-    line-height: 150%;
-    padding: 8px;
-}
-.testimony-title {
-    font-size: 24px;
-    font-weight: 100;
-    margin-bottom: 17px;
-}
-.testimony > p {
+.testimony {
+  > p {
     font-size: 14px;
     line-height: 170%;
-}
-.testimony-attribution {
+  }
+  &-title {
+    font-size: 24px;
+    font-weight: $default-font-weight;
+    margin-bottom: 17px;
+  }
+  &-attribution {
     font-style: italic;
+    > a {
+      color: $dark-gray;
+      &:hover, &:visited, &:link, &:active {
+        color: $dark-gray;
+      }
+    }
+  }
 }
