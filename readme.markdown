@@ -902,6 +902,14 @@ pasa a ser en Sass
 
 con la ventaja de poder ir metiendole mas css entremedias.
 
+## Compilar directorios enteros
+
+```
+sass --watch sass:css
+```
+
+## Partials
 
 
-t8.4 v.137
+
+t8.6 v.140
