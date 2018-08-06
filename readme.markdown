@@ -910,6 +910,23 @@ sass --watch sass:css
 
 ## Partials
 
+Vamos a crear components
+
+Ejemplo:
+
+si tenemos la clase .section_hero-title {(...)} entonces creamos el fichero:
+`section_hero-title.scss`
+
+Si queremos que el fichero sea un partial (es decir que no sea compilado de forma automatica con el comando watch) entonces lo ponemos un underscore al principio:
+`_section_hero-title.scss`
+Eso hará que no sea compilado de forma automática sino que tenga que ser importando desde otro fichero scss.
+Lo bueno de esto es que el fichero css compilado puede tener varios componentes a la vez. Cargar un solo fichero css desde el navegador es menos pesado que tener que cargar varios ficheros css a la vez.
+
+Para importar un partials lo hacemos sin el undercore y sin la extención.
+
+`@import "components/section_hero-title";`
 
 
-t8.6 v.140
+
+
+t8.7 v.141
