@@ -922,11 +922,38 @@ Si queremos que el fichero sea un partial (es decir que no sea compilado de form
 Eso hará que no sea compilado de forma automática sino que tenga que ser importando desde otro fichero scss.
 Lo bueno de esto es que el fichero css compilado puede tener varios componentes a la vez. Cargar un solo fichero css desde el navegador es menos pesado que tener que cargar varios ficheros css a la vez.
 
-Para importar un partials lo hacemos sin el undercore y sin la extención.
+Para importar un partials lo hacemos sin el underscore y sin la extención.
 
 `@import "components/section_hero-title";`
 
+## Organización de ficheros
+
+ - Metemos en el fichero variables las variables (fonts, colores)
+ - Metemos en el fichero base los elementos por defecto (h1, etc.
+ - Usamos tantas componentes cómo sean necesarios
+ 
+Una vez organizado el fichero styles.scss se nos puede quedar super minimalista:
+
+```
+@import "variables";
+@import "base";
+
+@import "components/section_hero-title";
+(...)
+```
+ 
+## CSS Source Maps
+
+Ayuda para inspeccionar css generado por sass.
+
+
+## Importación automática de un directorio con componentes
+
+Hay una extención llamada Sass Globbing que nos lo permite
+
+## Instalar extensiones sass
 
 
 
-t8.7 v.141
+
+t8.15 v.149

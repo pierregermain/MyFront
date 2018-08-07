@@ -31,7 +31,7 @@ h1, h2, h3 {
   background-color: #6D6D6D;
   padding: 3px;
 }
-.slide > .slide-title {
+> .slide-title {
   font-size: 39px;
   font-weight: 500;
   color: white;

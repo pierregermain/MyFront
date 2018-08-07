@@ -1,72 +1,8 @@
-// Colores
-$dark-gray: #6D6D6D;
-$medium-gray: #DADADA;
-$light-gray: #e8e8e8;
-$white: white;
-
-// Tipografía
-$default-font-weight: 100;
-
-// Elementos HTML por defecto
-body {
-  color: $dark-gray;
-  font-weight: $default-font-weight;
-}
-h1, h2, h3 {
-  font-weight: $default-font-weight;
-}
+@import "variables";
+@import "base";
 
 @import "components/section_hero-title";
+@import "components/slide";
+@import "components/icon_box";
+@import "components/testimony";
 
-.slide {
-  background-color: $dark-gray;
-  padding: 3px;
-  > .slide-title {
-    font-size: 39px;
-    font-weight: 500;
-    color: $white;
-    line-height: 150%;
-  }
-  > p {
-    color: $white;
-    font-weight: $default-font-weight;
-    font-size: 20px;
-  }
-}
-
-.icon_box {
-  background-color: #e8e8e8;
-  > p { // TODO: Unify paragraph styles
-    font-size: 14px;
-    line-height: 150%;
-    padding: 8px;
-  }
-  &-title {
-    font-size: 26px;
-    font-weight: $default-font-weight;
-    color: $dark-gray;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-}
-.testimony {
-  > p {
-    font-size: 14px;
-    line-height: 170%;
-  }
-  &-title {
-    font-size: 24px;
-    font-weight: $default-font-weight;
-    margin-bottom: 17px;
-  }
-  &-attribution {
-    font-style: italic;
-    > a {
-      color: $dark-gray;
-      &:hover, &:visited, &:link, &:active {
-        color: $dark-gray;
-      }
-    }
-  }
-}
