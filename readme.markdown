@@ -946,14 +946,55 @@ Una vez organizado el fichero styles.scss se nos puede quedar super minimalista:
 
 Ayuda para inspeccionar css generado por sass.
 
+## Sass Globbing: Importación automática de un directorio con componentes
 
-## Importación automática de un directorio con componentes
+Hay una extención llamada *Sass Globbing* que nos lo permite :)
 
-Hay una extención llamada Sass Globbing que nos lo permite
+Si lo instalas puedes importar componentes así:
 
-## Instalar extensiones sass
+`@import "components/*";`
+
+## Instalar extensiones sass: Ejemplo de Sass Globbing
+ 
+Ejemplo: Instalar la extención Sass Globbing.
+Ver: https://github.com/chriseppstein/sass-globbing
+Ver: `08-Sass/*`
+
+Si te fijas para instalarlo hay que hacer:
+`gem install sass-globbing`, en este caso `gem` es el manejador de ruby que ya deberías tener instalado.
+
+Una vez instalado podemos ahora ejecutar
+`sass -r sass-globbing --watch sass:css`
+para hacer uso del sass-globbing
+
+### Ojo con el uso del Sass Globbing
+
+Ojo con usar Sass Globbing ya que ya no tendremos el poder de elegir el orden en el que se compilan nuestras fuentes. 
+Pero si los componentes están bien realizados no debería importarte el orden.
+
+## Ventajas y Desventajas de usar SASS
+
+Ventajas: Poder usar Lógica, no tener que usar Repeticion, uso de Variables, libertad en tu Estructura
+
+Desventajas: Dependencia del Software, Dependencias externas
+
+## Más Info sobre Sass
+
+[Guía Rápida de Sass](http://www.sass-lang.com/guide)
+[Documentación de Sass](http://www.sass-lang.com/documentation/file.SASS_REFERENCE.html)
+
+## Compass y Sass
+
+Es importante saber que no hace falta usar compass para usar sass
+
+# Mapa de Herramientas Frontend
+
+```
+Node (con NVM) -- para --> Bower (con Grunt/Gulp y sus plugins)
+Ruby (con RVM) -- para --> Sass (con Sass Extensions (con Bundler)
+```
+
+donde NVM, RVM y Bundler se usan como manejador de versiones.
 
 
-
-
-t8.15 v.149
+t9.1 v.156

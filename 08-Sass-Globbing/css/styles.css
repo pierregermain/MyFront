@@ -1,0 +1,66 @@
+body {
+  color: #6D6D6D;
+  font-weight: 100; }
+
+h1, h2, h3 {
+  font-weight: 100; }
+
+.icon_box {
+  background-color: #e8e8e8; }
+  .icon_box > p {
+    font-size: 14px;
+    line-height: 150%;
+    padding: 8px; }
+  .icon_box-title {
+    font-size: 26px;
+    font-weight: 100;
+    color: #6D6D6D;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+
+.section_hero-title {
+  font-size: 34px;
+  font-weight: normal;
+  color: #7A7A7A;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  border-bottom: solid 1px #DADADA;
+  padding-bottom: 30px;
+  margin-bottom: 32px; }
+
+.section_hero--alt {
+  background-color: #e8e8e8;
+  padding: 26px 121px; }
+  .section_hero--alt > .section_hero-title {
+    border-bottom-color: #e8e8e8; }
+
+.slide {
+  background-color: #6D6D6D;
+  padding: 3px; }
+  > .slide-title {
+    font-size: 39px;
+    font-weight: 500;
+    color: white;
+    line-height: 150%; }
+  .slide > p {
+    color: white;
+    font-weight: 100;
+    font-size: 20px; }
+
+.testimony > p {
+  font-size: 14px;
+  line-height: 170%; }
+.testimony-title {
+  font-size: 24px;
+  font-weight: 100;
+  margin-bottom: 17px; }
+.testimony-attribution {
+  font-style: italic; }
+  .testimony-attribution > a {
+    color: #6D6D6D; }
+    .testimony-attribution > a:hover, .testimony-attribution > a:visited, .testimony-attribution > a:link, .testimony-attribution > a:active {
+      color: #6D6D6D; }
+
+/*# sourceMappingURL=styles.css.map */
