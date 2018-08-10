@@ -996,5 +996,27 @@ Ruby (con RVM) -- para --> Sass (con Sass Extensions (con Bundler)
 
 donde NVM, RVM y Bundler se usan como manejador de versiones.
 
+# Uso de Bundler cómo manejador de Versiones
 
-t9.1 v.156
+Ver `09-Bundler/Gemfile`
+
+[Bundler](www.bundler.io) es similar a Bower. 
+ 
+Para instalarlo hacemos `gem install bundler`.
+También vamos a necesitar el entorno de desarrollod de ruby: `sudo apt-get install ruby-dev`
+
+En nuestro proyecto tendremos un fichero llamado `Gemfile` que nos mantiene las versiones de nuestro software 
+
+Para ver las versiones que tenemos instaladas en nuestro sistema podemos hacer `gem list`
+
+## Instalar sofware con bundle
+
+Una vez creado nuestro Gemfile podemos ejecutar `bundle install`
+
+Una vez instalado (usando bundle install) se genera el fichero `Gemfile.lock` de forma automática que nos indica
+que versiones del sotware se han instalado.
+Con el lock file tenemos total control sobre las versiones instaladas, en cambio con el BundleFile nada mas indicamos la compatibilidad de nuestro proyecto
+
+
+
+t9.6 v.161
