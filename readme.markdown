@@ -1042,8 +1042,12 @@ Una vez actualizado el bundle file para actualizar el sotware local haríamos `b
 
 # Estilando el Footer
 
+ - Existe el tag para footer que por defecto tiene un display block que ocupara todo el ancho de la página.
+ - Para el copyright podemos usar el código HTML `&copy;`
+
+## Sass Scaffolding
 
 
 
 
-t9.11 v.165
+t9.12 v.166
