@@ -1009,14 +1009,41 @@ En nuestro proyecto tendremos un fichero llamado `Gemfile` que nos mantiene las 
 
 Para ver las versiones que tenemos instaladas en nuestro sistema podemos hacer `gem list`
 
-## Instalar sofware con bundle
+## Instalar software con bundle
 
 Una vez creado nuestro Gemfile podemos ejecutar `bundle install`
 
 Una vez instalado (usando bundle install) se genera el fichero `Gemfile.lock` de forma automática que nos indica
-que versiones del sotware se han instalado.
+que versiones del software se han instalado.
 Con el lock file tenemos total control sobre las versiones instaladas, en cambio con el BundleFile nada mas indicamos la compatibilidad de nuestro proyecto
 
+### Ejecutar software configurado con bundle
+
+En vez de ejecutar
+`sass -r sass-globbing --watch sass:css` que ejecutaríá nuestro software global, 
+ahora ejecutaríamos 
+`bundle exec sass -r sass-globbing --watch sass:css` que ejecutaría nuestro software local del projecto.
+
+Aquí un ejemplo que demuestra que se pueden usar varias versiones de Sass:
+```
+$ sass -v
+Ruby Sass 3.5.7
+$ bundle exec sass -v
+Ruby Sass 3.5.6
+```
+
+### Versiones de Software
+
+En el siguiente enlace se muestra la sintaxis para las versiones (en bundler es un poco diferente)
+https://bundler.io/gemfile.html (buscar '2.0')
+
+Una vez actualizado el bundle file para actualizar el sotware local haríamos `bundle update`
 
 
-t9.6 v.161
+# Estilando el Footer
+
+
+
+
+
+t9.11 v.165

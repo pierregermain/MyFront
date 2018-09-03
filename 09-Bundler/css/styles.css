@@ -39,7 +39,7 @@ h1, h2, h3 {
 .slide {
   background-color: #6D6D6D;
   padding: 3px; }
-  > .slide-title {
+  .slide > .slide-title {
     font-size: 39px;
     font-weight: 500;
     color: white;

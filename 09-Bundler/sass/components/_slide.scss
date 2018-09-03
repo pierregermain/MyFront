@@ -1,13 +1,13 @@
 .slide {
   background-color: $dark-gray;
   padding: 3px;
-  > &-title {
+  & > &-title {
     font-size: 39px;
     font-weight: 500;
     color: $white;
     line-height: 150%;
   }
-  > p {
+  & > p {
     color: $white;
     font-weight: $default-font-weight;
     font-size: 20px;
