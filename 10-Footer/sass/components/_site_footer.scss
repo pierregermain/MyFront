@@ -1,0 +1,13 @@
+.site_footer{
+  background-color: $dark-gray;
+  color: $medium-dark-gray;
+  > p {
+    $margin: 8px;
+    margin-top: $margin;
+    margin-bottom: $margin;
+  }
+  &-copyright{
+    color: $white;
+    font-weight: 400;
+  }
+}

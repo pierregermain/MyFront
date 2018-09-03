@@ -1044,10 +1044,43 @@ Una vez actualizado el bundle file para actualizar el sotware local haríamos `b
 
  - Existe el tag para footer que por defecto tiene un display block que ocupara todo el ancho de la página.
  - Para el copyright podemos usar el código HTML `&copy;`
+ - Si usas <footer> ya no debería aparecer en el contenido del Screen Reader
+ - No tiene sentido aplicar estilo al `<footer>` directamenete ya que se pueden usar `<footer>` dentro de otros elementos (por ejemplo artículos)
+ - Lo normal es aplicar una clase al footer y aplicar los estilos a dicha clase.
+ - Para cada parte de nuestro footer podemos usar una clase especial usando SMACS (por ejemplo *site_footer-copyright*).
+ 
 
-## Sass Scaffolding
+## Sass Cascading
+
+ - Siempre que puedas usa el "child selector >" ya que es más eficiente que el selector " " en blanco que buscará también hijos de hijos.
+
+## Sass Variables y Scope
+
+En versiones recientes de Sass podemos usar 
+
+``` 
+p {
+    $margin: 3px;
+    margin-top: $margin;
+    margin-bottom: $margin;
+}
+```
+
+y sólo afectaría a nuestro <p> ya que se ha definido dentro del mismo
+
+Si queremos afectar a todo el CSS usaríamos la palabra clave *global*
+
+``` 
+p {
+    $margin: 3px !global;
+    margin-top: $margin;
+    margin-bottom: $margin;
+}
+```
+
+TODO: Navigation vs. Lists
+
+http://bfreemore.blogspot.com/2011/01/web-accessibility-with-reinhard-stebner.html
 
 
-
-
-t9.12 v.166
+t9.20 v.175

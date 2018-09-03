@@ -1,5 +1,5 @@
 body {
-  color: #6D6D6D;
+  color: #515151;
   font-weight: 100; }
 
 h1, h2, h3 {
@@ -14,7 +14,7 @@ h1, h2, h3 {
   .icon_box-title {
     font-size: 26px;
     font-weight: 100;
-    color: #6D6D6D;
+    color: #515151;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px; }
@@ -36,8 +36,18 @@ h1, h2, h3 {
   .section_hero--alt > .section_hero-title {
     border-bottom-color: #e8e8e8; }
 
+.site_footer {
+  background-color: #515151;
+  color: #aeaeae; }
+  .site_footer > p {
+    margin-top: 8px;
+    margin-bottom: 8px; }
+  .site_footer-copyright {
+    color: white;
+    font-weight: 400; }
+
 .slide {
-  background-color: #6D6D6D;
+  background-color: #515151;
   padding: 3px; }
   .slide > .slide-title {
     font-size: 39px;
@@ -59,8 +69,8 @@ h1, h2, h3 {
 .testimony-attribution {
   font-style: italic; }
   .testimony-attribution > a {
-    color: #6D6D6D; }
+    color: #515151; }
     .testimony-attribution > a:hover, .testimony-attribution > a:visited, .testimony-attribution > a:link, .testimony-attribution > a:active {
-      color: #6D6D6D; }
+      color: #515151; }
 
 /*# sourceMappingURL=styles.css.map */
