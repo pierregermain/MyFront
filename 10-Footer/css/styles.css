@@ -40,11 +40,17 @@ h1, h2, h3 {
   background-color: #515151;
   color: #aeaeae; }
   .site_footer > p {
-    margin-top: 8px;
-    margin-bottom: 8px; }
+    margin-top: 0.5em;
+    margin-bottom: 0.5em; }
   .site_footer-copyright {
     color: white;
     font-weight: 400; }
+  .site_footer-primary_nav a:hover, .site_footer-primary_nav a:visited, .site_footer-primary_nav a:link, .site_footer-primary_nav a:active {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-right: 0.625em;
+    margin-left: 0.625em; }
 
 .slide {
   background-color: #515151;

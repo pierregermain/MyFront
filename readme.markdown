@@ -1080,7 +1080,76 @@ p {
 
 TODO: Navigation vs. Lists
 
-http://bfreemore.blogspot.com/2011/01/web-accessibility-with-reinhard-stebner.html
+## Navegación
 
+ - No deberíamos (quizás) usar Listas para navegaciones.
 
-t9.20 v.175
+### Elemento <nav>
+
+ - Para cada navegación vamos a usar un <nav> con una clase especial usando SMACS.
+ - Usando padding podemos aumentar el clickable area de los anchors.
+ - Usando margin no agrandamos el clickable area y podemos hacer que los links esten separados uno de los otros.
+
+### Margen Vertical vs. Margen Horizontal
+
+Es importante saber que:
+
+ - En Vertical siempre se toma el margen mayor
+ - En Horizontal se acumulan los margenes (se suma el margen del elemento derecho e izquierdo)
+ 
+### Uso de Márgenes con Em's en vez de Pixeles
+
+ - Una manera de usar márgenes en Em's es primero usar Pixeles y a continuación convertirlo a Em's.
+ - Así los márgenes se irán adaptando relativos al tamaño de la fuenta.
+ - En el caso de navegaciones es normal usar em's, no tanto usar porcentajes.
+ 
+ ```
+ Ejemplo:
+  - Estamos usando un márgen de 10px
+  - La fuenta 1em equivale a 16px (es el defecto del navegador web)
+  - Entonces tenemos que usar un márgen de 10/16 = 0.625em
+  - En Sass podemos usar la menclatura: (10/16) + em;
+  
+  Usando Variables en Sass quedaría así
+  
+  $default-font-size: 16
+  margin: (10/$default-font-size) + em;
+  
+```
+  
+# Sass Functions y Mixin
+
+ - En el caso de *Mixin* siempre se devuelve una regla css.
+ 
+Sintaxis *Mixin*:
+
+```
+@mixin myMix($num) {
+  padding: $num;
+}
+
+.myClass {
+  @include myMix(10px);
+}
+
+```
+
+ - En el caso de *Function* siempre se devuelve un valor.
+ 
+ Sintaxis *Function*
+ 
+```
+@function myF($n,$m){
+  @return $n + $m
+}
+
+.myClass {
+  padding: myF(6px,4px);
+}
+```
+ 
+
+t10.1 v.180
+
+NOT SEEN
+9.8 readme.md and automating documentation
