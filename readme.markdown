@@ -1181,10 +1181,24 @@ https://webdesign.tutsplus.com/es/tutorials/comprehensive-guide-when-to-use-em-v
  
  - Básicamente si es posible definir un fichero padre base para los tamaños todos de forma relativa.
  
+# Bordes Horizontales
+
+ - Lo lógico es que no apliques el borde al primer elemento sino al segundo en caso de existir.
+ - Aplicas un margen inferior al elemento superior
+ - Aplicas un padding superior al elemento inferior
+ - Para controlar el ancho puedes usar *width* con unidades *rem*.
+ - Si usas un ancho fijo y quieres tener el contenido centrado tendrás que usar margin-left y margin-right a auto.
+ 
+# Html y Css Scaffolding para Headers
 
 
 
-t11 v.187
+ 
+ 
+
+
+t10.9 v.196
 
 NOT SEEN
 9.8 readme.md and automating documentation
+10.1,  10.2,  10.4 estilando
