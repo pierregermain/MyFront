@@ -1,0 +1,20 @@
+.testimony {
+  > p {
+    font-size: 14px;
+    line-height: 170%;
+  }
+  &-title {
+    font-size: 24px;
+    font-weight: $default-font-weight;
+    margin-bottom: 17px;
+  }
+  &-attribution {
+    font-style: italic;
+    > a {
+      color: $dark-gray;
+      &:hover, &:visited, &:link, &:active {
+        color: $dark-gray;
+      }
+    }
+  }
+}

@@ -1040,7 +1040,9 @@ https://bundler.io/gemfile.html (buscar '2.0')
 Una vez actualizado el bundle file para actualizar el sotware local haríamos `bundle update`
 
 
-# Estilando el Footer
+# Footer
+
+Ver `10-Footer/*`
 
  - Existe el tag para footer que por defecto tiene un display block que ocupara todo el ancho de la página.
  - Para el copyright podemos usar el código HTML `&copy;`
@@ -1077,8 +1079,6 @@ p {
     margin-bottom: $margin;
 }
 ```
-
-TODO: Navigation vs. Lists
 
 ## Navegación
 
@@ -1118,6 +1118,8 @@ Es importante saber que:
 ```
   
 # Sass Functions y Mixin
+
+Ver `11-Functions/*`
 
  - En el caso de *Mixin* siempre se devuelve una regla css.
  

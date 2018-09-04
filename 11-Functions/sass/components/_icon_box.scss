@@ -1,0 +1,16 @@
+.icon_box {
+  background-color: #e8e8e8;
+  > p { // TODO: Unify paragraph styles
+    font-size: 14px;
+    line-height: 150%;
+    padding: 8px;
+  }
+  &-title {
+    font-size: 26px;
+    font-weight: $default-font-weight;
+    color: $dark-gray;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
