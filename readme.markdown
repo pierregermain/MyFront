@@ -1121,6 +1121,7 @@ Es importante saber que:
 
 Ver `11-Functions/*`
 
+ - Es habitual dejar el fichero de funciones en el fichero `_functions.scss`
  - En el caso de *Mixin* siempre se devuelve una regla css.
  
 Sintaxis *Mixin*:
@@ -1142,7 +1143,7 @@ Sintaxis *Mixin*:
  
 ```
 @function myF($n,$m){
-  @return $n + $m
+  @return $n + $m;
 }
 
 .myClass {
@@ -1150,8 +1151,40 @@ Sintaxis *Mixin*:
 }
 ```
  
+## Valores por defecto Arguments
 
-t10.1 v.180
+Ejemplo:
+```
+@function myF($arg1, $arg2:5) {
+  @return (...)
+}
+```
+
+En este caso arg2 toma el valor 5 si no se le pasa ningún valor
+
+
+## Em's vs Rem's
+
+ - Para un slider tiene más sentido usar Rem's que Em's. Así los tamaños están definidos en base al elemento padre y no tanto en base al elemento actual.
+
+Aquí todo un post al respecto
+
+https://webdesign.tutsplus.com/es/tutorials/comprehensive-guide-when-to-use-em-vs-rem--cms-23984
+
+ - Una vez definido el font size ya podemos usar em's para los margenes
+ 
+ - Para tamaños de fuente Padres es muy normal usar "Rem's" en vez de "Em's"
+ 
+ - A veces es mejor calcular directmente para los margenes los Em's a ser usados en vez de usar una función.
+ 
+ - Los bordes no solemos designarlos con em's o rem's
+ 
+ - Básicamente si es posible definir un fichero padre base para los tamaños todos de forma relativa.
+ 
+
+
+
+t11 v.187
 
 NOT SEEN
 9.8 readme.md and automating documentation

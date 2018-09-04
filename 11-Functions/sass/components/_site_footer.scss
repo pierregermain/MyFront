@@ -2,7 +2,7 @@
   background-color: $dark-gray;
   color: $medium-dark-gray;
   > p {
-    $margin: (8/$default-font-size) + em;
+    $margin: px2em (8);
     margin-top: $margin;
     margin-bottom: $margin;
   }
@@ -16,8 +16,8 @@
         color: $white;
         text-transform: uppercase;
         text-decoration: none;
-        margin-right: (10/$default-font-size) + em;
-        margin-left: (10/$default-font-size) + em;
+        margin-right: px2em(10);
+        margin-left: px2em(10);
       }
     }
 

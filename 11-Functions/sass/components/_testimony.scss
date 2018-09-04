@@ -1,12 +1,12 @@
 .testimony {
   > p {
-    font-size: 14px;
+    font-size: px2rem(14);
     line-height: 170%;
   }
   &-title {
-    font-size: 24px;
+    font-size: px2rem(24);
     font-weight: $default-font-weight;
-    margin-bottom: 17px;
+    margin-bottom: .7em;
   }
   &-attribution {
     font-style: italic;
