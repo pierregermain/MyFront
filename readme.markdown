@@ -1189,15 +1189,51 @@ https://webdesign.tutsplus.com/es/tutorials/comprehensive-guide-when-to-use-em-v
  - Para controlar el ancho puedes usar *width* con unidades *rem*.
  - Si usas un ancho fijo y quieres tener el contenido centrado tendrás que usar margin-left y margin-right a auto.
  
-# Html y Css Scaffolding para Headers
+# Header
 
+ - Para tu navegación usa <header><nav><ul><li><a>
+ - Para separar elementos del header usar div's (no sections)
+ - En SMACS se usa *is-active* para los elementos activos
+ - Los <a> necesitan display: inline-block
 
+# Vendor Prefixes
 
+ - Para especializarse en navegadores viejos o hacer estilos propios para cada uno usar:
  
+```
+-moz-*
+-webkit-*
+```
+## Autoprefixes
+
+- Se pueden usar @mixin's en Sass que hacen esta tarea manualmente
+- Pero usando herramientas tipo Grunt/Gulp/Compass podemos automatizar los Prefixes
  
+# Botones
+
+ - Un botón debería ser un component independiente.
+ - Recuerda que si el botón es un <a> tendrás que aplicarle un display block o inline-block.
+ - Podemos usar funciones Sass lighten() y darken() para cambiar colores (por ejemplo para bordes)
+ - Para usar otros botones similares usaríamos otra vez SMACS : `class="button button--pill"`
+
+# Colores RGBA
+
+ - Son colores compuestos por red, green, blue y alpha (transparencia)
+ - Para aplicar una sombra es mejor aplicar:
+ 
+```
+text-shadow: 1px, 1px, 1px, rgba(0,0,0,0.3);
+```
+
+# Tipografía
+
+Hasta aquí habrás aprendido todo lo immportante hasta tipografía :)
+
+# Tipografía de Iconos
+
+t12.1 v.214
 
 
-t11.10 v.196
 
 NOT SEEN
 9.8 readme.md and automating documentation
