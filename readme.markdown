@@ -1229,12 +1229,53 @@ text-shadow: 1px, 1px, 1px, rgba(0,0,0,0.3);
 
 Hasta aquí habrás aprendido todo lo immportante hasta tipografía :)
 
-# Tipografía de Iconos
+# shame.css
 
-t12.1 v.214
+ - Hay gente que usa ese fichero para los hacks más asquerosos.
+ - Yo no recomiendo hacerlo ya que al final siempre se va a quedar ahí.
+ - Yo siento que es mejor meter el código en cuestión en el componente correcto.
+
+# Icon FontsVer 
+
+Ver `12-Icon-Fonts`
+
+
+
+## Ventajas
+
+ - Escalan muy bien
+ - Fácil de trabajar con ellos
+
+## Font Awesome
+
+Lista: https://fontawesome.com/icons?d=gallery&m=free
+
+### Instalación
+
+Puedes usar el CDN o bajarte los ficheros tu mismo.
+
+En los ficheros css podemos encontrar la línea @font-face que nos indica con que nombre referenciar el Font desde CSS
+
+Vemos que @font-face nos dice que los ficheros están en ../fonts ... por lo tanto instalamos en el root las fonts en /fonts/
+
+TODO:
+(creamos el fichero play, copiamos @font-face, lo metemos el play)
+
+ 
+---
+
+#Accessibility
+
+
+ 
+t.19.1 v.557
+
+
 
 
 
 NOT SEEN
 9.8 readme.md and automating documentation
 10.1,  10.2,  10.4 estilando
+(t12.6 v.217) to (t.17 v.556)
+
