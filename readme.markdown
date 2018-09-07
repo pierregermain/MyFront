@@ -1268,7 +1268,6 @@ t12.16
 ---
 
 NOT SEEN
-9.8 readme.md and automating documentation
 10.1,  10.2,  10.4 estilando
 (t12.6 v.217) to (t.17 v.556)
 
