@@ -136,5 +136,22 @@ https://www.w3.org/TR/aria-in-html/#recommendation-table
  - Deben usar elementos ARIA
  - Muchas veces para arreglar los problemas tendrás que ponerte en contacto con el desarrollador tercero.
  
- 
+
+Herramientas que me molan
+
+Deque Axe Tool: Tool para Firefox, Chrome y Cmd:
+https://www.deque.com/axe/
+https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US
+
+Google Lighthouse. Directo desde el Inspector
+https://developers.google.com/web/updates/2018/01/devtools#a11y
+https://developers.google.com/web/tools/lighthouse/#devtools
+
+Google Lighthouse Original
+https://chrome.google.com/webstore/detail/wcag-accessibility-audit/kpfleokokmllclahndmochhenmhncoej
+
+Screen Reader - Solo windows
+https://www.nvaccess.org/download/
+
+
 ---
