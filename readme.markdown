@@ -1225,23 +1225,23 @@ https://webdesign.tutsplus.com/es/tutorials/comprehensive-guide-when-to-use-em-v
 text-shadow: 1px, 1px, 1px, rgba(0,0,0,0.3);
 ```
 
-# Tipografía
+
+
+# Icon Fonts (T12)
+
+## Sobre Tipografía
 
 Hasta aquí habrás aprendido todo lo immportante hasta tipografía :)
 
-# shame.css
+## Sobre Shame.css
 
  - Hay gente que usa ese fichero para los hacks más asquerosos.
  - Yo no recomiendo hacerlo ya que al final siempre se va a quedar ahí.
  - Yo siento que es mejor meter el código en cuestión en el componente correcto.
-
-# Icon FontsVer 
-
 Ver `12-Icon-Fonts`
 
 
-
-## Ventajas
+## Ventajas de Icon Fonts
 
  - Escalan muy bien
  - Fácil de trabajar con ellos
@@ -1250,7 +1250,7 @@ Ver `12-Icon-Fonts`
 
 Lista: https://fontawesome.com/icons?d=gallery&m=free
 
-### Instalación
+### Instalación de una Font
 
 Puedes usar el CDN o bajarte los ficheros tu mismo.
 
@@ -1262,8 +1262,10 @@ TODO:
 (creamos el fichero play, copiamos @font-face, lo metemos el play)
 
  
+t12.16
 
 
+---
 
 NOT SEEN
 9.8 readme.md and automating documentation
