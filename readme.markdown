@@ -27,7 +27,7 @@ BAM - Frontend
   * [Hacer el CSS longterm](#hacer-el-css-longterm)
   * [CSS Semántico con clases](#css-sem-ntico-con-clases)
     + [Cambio de nuestro CSS a Semántico](#cambio-de-nuestro-css-a-sem-ntico)
-- [Organización de CSS con SMACSS](#organizaci-n-de-css-con-smacss)
+- [Organización de CSS con SMACSS](#organización-de-css-con-smacss)
   * [Componentes (o Módulos) en CSS y HTML](#componentes--o-m-dulos--en-css-y-html)
   * [Subcomponentes (ó Submódulos)](#subcomponentes----subm-dulos-)
   * [Siguientes conversiones: Más Headings](#siguientes-conversiones--m-s-headings-1)
