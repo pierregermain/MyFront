@@ -1,5 +1,5 @@
 BAM - Frontend
-- [Introducción](#introducci-n)
+- [Introducción](#introducción)
   * [Back vs Front](#back-vs-front)
   * [Sobre el Curso](#sobre-el-curso)
   * [Consideraciones HTML](#consideraciones-html)
