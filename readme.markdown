@@ -1,6 +1,113 @@
 BAM - Frontend
 
-# Intro
+- [Introducción](#introduccin)
+	- [Back vs Front](#back-vs-front)
+	- [Sobre el Curso](#sobre-el-curso)
+	- [Consideraciones HTML](#consideraciones-html)
+	- [Pasos para pasar del Diseño al Frontend](#pasos-para-pasar-del-diseo-al-frontend)
+	- [Consideraciones Frontend](#consideraciones-frontend)
+- [Css Básico](#css-bsico)
+	- [Definir Tipografía](#definir-tipografa)
+		- [Font Properties](#font-properties)
+		- [Text Properties](#text-properties)
+	- [Headings](#headings)
+	- [Clases y Selectores](#clases-y-selectores)
+	- [Secciones](#secciones)
+	- [Cálculo de Margin y Padding](#clculo-de-margin-y-padding)
+		- [Padding Shorthand:](#padding-shorthand)
+	- [Siguientes conversiones: Más Headings](#siguientes-conversiones-ms-headings)
+	- [Búsqueda del nombre característicos para una clase](#bsqueda-del-nombre-caractersticos-para-una-clase)
+	- [Sobre clases por defecto](#sobre-clases-por-defecto)
+	- [Selectores con Hijos (Compound Selector)](#selectores-con-hijos-compound-selector)
+		- [Selectores Hijos](#selectores-hijos)
+	- [Reglas CSS](#reglas-css)
+	- [Organización básica de CSS](#organizacin-bsica-de-css)
+	- [Importar Css](#importar-css)
+	- [Modificación de CSS desde Navegadores](#modificacin-de-css-desde-navegadores)
+	- [Evitar tanto override](#evitar-tanto-override)
+	- [Hacer el CSS longterm](#hacer-el-css-longterm)
+	- [CSS Semántico con clases](#css-semntico-con-clases)
+		- [Cambio de nuestro CSS a Semántico](#cambio-de-nuestro-css-a-semntico)
+- [Organización de CSS con SMACSS](#organizacin-de-css-con-smacss)
+	- [Componentes (o Módulos) en CSS y HTML](#componentes-o-mdulos-en-css-y-html)
+	- [Subcomponentes (ó Submódulos)](#subcomponentes--submdulos)
+	- [Siguientes conversiones: Más Headings](#siguientes-conversiones-ms-headings-1)
+	- [Line-height](#line-height)
+		- [Sobre Margins](#sobre-margins)
+	- [Más paragraphs](#ms-paragraphs)
+	- [Trucos para estilar un anchor](#trucos-para-estilar-un-anchor)
+	- [Uso del mismo CSS para varios selectores](#uso-del-mismo-css-para-varios-selectores)
+	- [Reducción de Repetición](#reduccin-de-repeticin)
+- [Reseteando](#reseteando)
+	- [Selector Universal *](#selector-universal-)
+	- [Standard Color Palette](#standard-color-palette)
+	- [Valores por defecto](#valores-por-defecto)
+	- [CSS Reset](#css-reset)
+		- [Universal Selector Reset](#universal-selector-reset)
+		- [Eric Meyer's Reset](#eric-meyers-reset)
+	- [Pros y Contras de usar Resets](#pros-y-contras-de-usar-resets)
+	- [Normalize.css](#normalizecss)
+		- [Instalación de Normalize.css](#instalacin-de-normalizecss)
+- [Package Manager](#package-manager)
+	- [Instalación de Bower (ya no se debe usar)](#instalacin-de-bower-ya-no-se-debe-usar)
+	- [Instalación de paquetes con Bower](#instalacin-de-paquetes-con-bower)
+	- [Sobre versiones](#sobre-versiones)
+	- [Creación del bower.json file](#creacin-del-bowerjson-file)
+	- [Bower y versiones semánticas](#bower-y-versiones-semnticas)
+	- [Compatibilidad de Navegadores](#compatibilidad-de-navegadores)
+	- [Polyfills](#polyfills)
+- [Unidades CSS](#unidades-css)
+	- [Relativo vs. Absoluto](#relativo-vs-absoluto)
+	- [Em's](#ems)
+	- [Rem's](#rems)
+	- [Uniteless](#uniteless)
+- [Sass](#sass)
+	- [Sass vs. Less](#sass-vs-less)
+	- [Instalación](#instalacin)
+	- [Sintaxis Scss](#sintaxis-scss)
+		- [Creación y uso de Variables](#creacin-y-uso-de-variables)
+		- [Comentarios en Sass](#comentarios-en-sass)
+		- [Sass watch](#sass-watch)
+	- [Nesting vs. SMACSS](#nesting-vs-smacss)
+	- [Componentes](#componentes)
+	- [Organización de Proyectos con Sass](#organizacin-de-proyectos-con-sass)
+		- [Uso del & en Sass con Smacss](#uso-del--en-sass-con-smacss)
+		- [Eficiencia](#eficiencia)
+		- [Reducir repetición](#reducir-repeticin)
+		- [Compilar directorios enteros](#compilar-directorios-enteros)
+		- [Partials](#partials)
+		- [Organización de ficheros](#organizacin-de-ficheros)
+		- [CSS Source Maps](#css-source-maps)
+		- [Sass Globbing: Importación automática de un directorio con componentes](#sass-globbing-importacin-automtica-de-un-directorio-con-componentes)
+		- [Instalar extensiones sass: Ejemplo de Sass Globbing](#instalar-extensiones-sass-ejemplo-de-sass-globbing)
+			- [Ojo con el uso del Sass Globbing](#ojo-con-el-uso-del-sass-globbing)
+	- [Ventajas y Desventajas de usar SASS](#ventajas-y-desventajas-de-usar-sass)
+	- [Más Info sobre Sass](#ms-info-sobre-sass)
+	- [Compass y Sass](#compass-y-sass)
+- [Mapa de Herramientas Frontend](#mapa-de-herramientas-frontend)
+	- [Uso de Bundler cómo manejador de Versiones](#uso-de-bundler-cmo-manejador-de-versiones)
+	- [Instalar software con bundle](#instalar-software-con-bundle)
+		- [Ejecutar software configurado con bundle](#ejecutar-software-configurado-con-bundle)
+		- [Versiones de Software](#versiones-de-software)
+- [Footer](#footer)
+	- [Sass Cascading](#sass-cascading)
+	- [Sass Variables y Scope](#sass-variables-y-scope)
+- [Navegación](#navegacin)
+	- [Elemento <nav>](#elemento-nav)
+	- [Margen Vertical vs. Margen Horizontal](#margen-vertical-vs-margen-horizontal)
+	- [Uso de Márgenes con Em's en vez de Pixeles](#uso-de-mrgenes-con-ems-en-vez-de-pixeles)
+- [Sass Functions y Mixin](#sass-functions-y-mixin)
+	- [Valores por defecto Arguments](#valores-por-defecto-arguments)
+- [Css y Sass Avanzado](#css-y-sass-avanzado)
+	- [Em's vs Rem's](#ems-vs-rems)
+	- [Bordes Horizontales](#bordes-horizontales)
+	- [Header](#header)
+	- [Vendor Prefixes](#vendor-prefixes)
+		- [Autoprefixes](#autoprefixes)
+	- [Botones](#botones)
+	- [Colores RGBA](#colores-rgba)
+
+# Introducción
 
 Hoy en día puedes hacer web sin crear directamente html. 
 Es bueno saber cómo funciona el html / css.
@@ -77,6 +184,8 @@ Normalmente empiezas "clean" y acabas haciendolo "sensible"
 
 Hay que encontrar un equilibrio entre las dos maneras de trabajar.
 
+# Css Básico
+
 ## Definir Tipografía
 
 ### Font Properties
@@ -126,7 +235,7 @@ Trucos:
       - [Pick](https://kryogenix.org/code/pick/) en Linux  
  - *text-identation*: Hay que tener cuidado con este que nos puede dar problemas con margenes/paddings/text-align
 
-### Headings
+## Headings
 
 Al empezar a hacer FE, podemos empezar por los Headers. Habrá que ver que cosas son parte del Header y cuales no.
 
@@ -158,7 +267,7 @@ Si necesitamos alinear podemos aplicar *text-align*.
 Ahora habrá que fijarse en el padding para separar el Header con el border. 
 Y a continuación el valor del margin-bottom para que el border esté a suficiente distancia con el siguiente elemento.
 
-### Clases y Selectores
+## Clases y Selectores
 
 Ahora que ya tenemos nuestras variables para nuestro H2, nos damos cuenta que habrá otros H2 que van a ser diferentes en estilo.
 Para dichos H2 podemos crear una clase caracteristica. Por ejemplo habrá borders que usen un color diferente.
@@ -216,7 +325,7 @@ Ver `video t3.13`
  - Es importante saber que si Section no tiene un padding, no se va a ver el margin de los elementos interiores.
  - En cuanto aplicas un padding de 1px, elementos interiores de repente se van a ver con el margen aplicado.
  
-## Padding Shorthand:
+### Padding Shorthand:
 
 Normalmente el padding superior e inferior tienen el mismo valor. Si no lo tienen quizás sea porque el diseñador hizo algo mal.
 
@@ -412,7 +521,7 @@ Ya hemos visto ejemplos de clase_padre-clase_hijo
  - En Drupal vamos a llamar a dichos contenedores "componentes" para no usar la nomenclatura "módulo"
  - La idea es que un componente podamos reusarlo y que se pueda mover de un sitio a otro en la web para poder ser reusado
 
-### Subcomponentes (ó Submódulos)
+## Subcomponentes (ó Submódulos)
 
 Ver `02-subcomponentes.html`
 
@@ -548,13 +657,13 @@ body {
     font-family: sans-serif;
     color: #626262;
 }
-h2, h3 {
+h1, h2, h3 {
     font-weight: 100;
 }
+p {
+line-height: 170%
+}
 ```
-## Sobre tipografías genéricas
-
-( ... TODO: t5.5 )
 
 ## CSS Reset
 
@@ -619,12 +728,12 @@ El archivo normalize siempre es mas grande que el de reset. El normalize da sopo
 Necesitamos el normalize.css y simplemente lo importamos arriba del todo en nuestro html. Verás que ciertos márgenes que te creaba el navegador por defecto han desaparecido.
 Habrá sentencias que ya no necesites aplicar, por ejemplo la font al body ahora se aplica al html.
 
-## Package Manager
+# Package Manager
 
 Es bueno usarlo para gestionar versiones / dependencias.
 Usaremos "Bower" basado en "Node". Bower es un package Manager para Herramientas de Frontend.
  
-### Instalación de Bower (ya no se debe usar)
+## Instalación de Bower (ya no se debe usar)
 
 https://bower.io/#install-bower
 
@@ -634,7 +743,7 @@ Se instala con npm (node package manager)
 
 Alternativamente deberíamos mejor usar `webpack` https://webpack.js.org/
 
-### Instalación de paquetes con bower
+## Instalación de paquetes con Bower
 
 Ver `06-Bower`
 
@@ -645,7 +754,7 @@ Al ejecutarlo nos instala a parte de otros este fichero: `normalize/.bower.json`
 
 En dicho fichero se encuentra la versión usada del paquete
 
-### Sobre versiones
+## Sobre versiones
 
 Ejemplo:
 2.3.4
@@ -653,7 +762,7 @@ donde 2 es la versión (si cambia API)
 donde 3 es el update (nuevas funciones, no cambia API)
 donde 4 es el parche (solo deberia arreglar cosas)
 
-### Creación del bower.json file
+## Creación del bower.json file
 
 Ahí metemos las dependencias de nuestro proyecto. Para crearlo hacemos `bower init`, nos irá preguntando cosas para crear el fichero:
 
@@ -678,7 +787,7 @@ Ahí metemos las dependencias de nuestro proyecto. Para crearlo hacemos `bower i
 }
 ```
 
-### Bower y versiones semánticas
+## Bower y versiones semánticas
 
 https://github.com/npm/node-semver#x-ranges-12x-1x-12-
 
@@ -702,6 +811,20 @@ Sobre versiones: https://github.com/dbrock/semver-howto
 "^0.3.2" Mayor o igual que 0.3.2 y menor que 0.4.0 (Al no ser que la versión mayor sea mayor que 0)
 
 ```
+
+## Compatibilidad de Navegadores
+
+www.caniuse.com
+
+Un porcentaje de un 90% para arriba es brutalmente bueno
+
+## Polyfills
+
+En JS podemos usar Polyfills para hacer compatible nuevas funcionalidades para navegadores antiguos.
+
+Para CSS tenemos `Houdini`.
+
+ - Sirve para tener acceso al engine del CSS, al engine de del navegador. Wow!
 
 # Unidades CSS
 
@@ -736,21 +859,7 @@ line-height: 1.1
 que
 line-height: 10%
 
-# Compatibilidad de Navegadores
 
-www.caniuse.com
-
-Un porcentaje de un 90% para arriba es brutalmente bueno
-
-## Polyfills
-
-En JS podemos usar Polyfills para hacer compatible nuevas funcionalidades para navegadores antiguos.
-
-Para CSS tenemos `Houdini`.
-
- - Sirve para tener acceso al engine del CSS, al engine de del navegador. Wow!
- 
- 
 # Sass
 
 Ayuda a usar lógica más avanzada que en CSS usando nombre de variables y eleminando repetición.
@@ -805,8 +914,6 @@ Para compilado automático :)
 
 `sass --watch input.scss:output.css`
 
-TODO: Wrapping up ... 7.13
-
 ## Nesting vs. SMACSS
 
 Con Sass podemos usar Nesting, que va un poco contra SMACSS, pero en muchos casos es preferible usar Nesting y a la hora de compilar se va a crear el SMACSS.
@@ -838,10 +945,10 @@ Cada componente debe tener su propio fichero.
 Al principio de va dar huevo seguir eso, pero a largo plazo vas a ver que hacerlo así ganarás en mantenimiento del proyecto.
 
 
-# Organización de Proyectos con Sass
+## Organización de Proyectos con Sass
 
 
-## Uso del & en Sass con Smacss
+### Uso del & en Sass con Smacss
 
 El operador `&` en Sass nos permite usar SMACSS
 
@@ -866,11 +973,11 @@ En Sass:
 ```
 que nos genera el CSS correctamente anteponiendo el string `.icon_box` al `-title` tal cómo se había definido en el CSS.
 
-## Eficiencia
+### Eficiencia
 
 Es bueno echarle un ojo al CSS que te genera Sass para ver si es eficiente y correcto (sobre todo al principio)
 
-## Reducir repetición
+### Reducir repetición
 
 Ejemplo: Anchor
 
@@ -902,13 +1009,13 @@ pasa a ser en Sass
 
 con la ventaja de poder ir metiendole mas css entremedias.
 
-## Compilar directorios enteros
+### Compilar directorios enteros
 
 ```
 sass --watch sass:css
 ```
 
-## Partials
+### Partials
 
 Vamos a crear components
 
@@ -926,7 +1033,7 @@ Para importar un partials lo hacemos sin el underscore y sin la extención.
 
 `@import "components/section_hero-title";`
 
-## Organización de ficheros
+### Organización de ficheros
 
  - Metemos en el fichero variables las variables (fonts, colores)
  - Metemos en el fichero base los elementos por defecto (h1, etc.
@@ -942,11 +1049,11 @@ Una vez organizado el fichero styles.scss se nos puede quedar super minimalista:
 (...)
 ```
  
-## CSS Source Maps
+### CSS Source Maps
 
 Ayuda para inspeccionar css generado por sass.
 
-## Sass Globbing: Importación automática de un directorio con componentes
+### Sass Globbing: Importación automática de un directorio con componentes
 
 Hay una extención llamada *Sass Globbing* que nos lo permite :)
 
@@ -954,7 +1061,7 @@ Si lo instalas puedes importar componentes así:
 
 `@import "components/*";`
 
-## Instalar extensiones sass: Ejemplo de Sass Globbing
+### Instalar extensiones sass: Ejemplo de Sass Globbing
  
 Ejemplo: Instalar la extención Sass Globbing.
 Ver: https://github.com/chriseppstein/sass-globbing
@@ -967,7 +1074,7 @@ Una vez instalado podemos ahora ejecutar
 `sass -r sass-globbing --watch sass:css`
 para hacer uso del sass-globbing
 
-### Ojo con el uso del Sass Globbing
+#### Ojo con el uso del Sass Globbing
 
 Ojo con usar Sass Globbing ya que ya no tendremos el poder de elegir el orden en el que se compilan nuestras fuentes. 
 Pero si los componentes están bien realizados no debería importarte el orden.
@@ -996,7 +1103,7 @@ Ruby (con RVM) -- para --> Sass (con Sass Extensions (con Bundler)
 
 donde NVM, RVM y Bundler se usan como manejador de versiones.
 
-# Uso de Bundler cómo manejador de Versiones
+## Uso de Bundler cómo manejador de Versiones
 
 Ver `09-Bundler/Gemfile`
 
@@ -1080,24 +1187,24 @@ p {
 }
 ```
 
-## Navegación
+# Navegación
 
  - No deberíamos (quizás) usar Listas para navegaciones.
 
-### Elemento <nav>
+## Elemento <nav>
 
  - Para cada navegación vamos a usar un <nav> con una clase especial usando SMACS.
  - Usando padding podemos aumentar el clickable area de los anchors.
  - Usando margin no agrandamos el clickable area y podemos hacer que los links esten separados uno de los otros.
 
-### Margen Vertical vs. Margen Horizontal
+## Margen Vertical vs. Margen Horizontal
 
 Es importante saber que:
 
  - En Vertical siempre se toma el margen mayor
  - En Horizontal se acumulan los margenes (se suma el margen del elemento derecho e izquierdo)
  
-### Uso de Márgenes con Em's en vez de Pixeles
+## Uso de Márgenes con Em's en vez de Pixeles
 
  - Una manera de usar márgenes en Em's es primero usar Pixeles y a continuación convertirlo a Em's.
  - Así los márgenes se irán adaptando relativos al tamaño de la fuenta.
@@ -1121,8 +1228,9 @@ Es importante saber que:
 
 Ver `11-Functions/*`
 
+ - Un mixin devuelve una regla css.
+ - Una función devuelve un valor.
  - Es habitual dejar el fichero de funciones en el fichero `_functions.scss`
- - En el caso de *Mixin* siempre se devuelve una regla css.
  
 Sintaxis *Mixin*:
 
@@ -1162,6 +1270,7 @@ Ejemplo:
 
 En este caso arg2 toma el valor 5 si no se le pasa ningún valor
 
+# Css y Sass Avanzado
 
 ## Em's vs Rem's
 
@@ -1181,7 +1290,7 @@ https://webdesign.tutsplus.com/es/tutorials/comprehensive-guide-when-to-use-em-v
  
  - Básicamente si es posible definir un fichero padre base para los tamaños todos de forma relativa.
  
-# Bordes Horizontales
+## Bordes Horizontales
 
  - Lo lógico es que no apliques el borde al primer elemento sino al segundo en caso de existir.
  - Aplicas un margen inferior al elemento superior
@@ -1189,14 +1298,14 @@ https://webdesign.tutsplus.com/es/tutorials/comprehensive-guide-when-to-use-em-v
  - Para controlar el ancho puedes usar *width* con unidades *rem*.
  - Si usas un ancho fijo y quieres tener el contenido centrado tendrás que usar margin-left y margin-right a auto.
  
-# Header
+## Header
 
  - Para tu navegación usa <header><nav><ul><li><a>
  - Para separar elementos del header usar div's (no sections)
  - En SMACS se usa *is-active* para los elementos activos
  - Los <a> necesitan display: inline-block
 
-# Vendor Prefixes
+## Vendor Prefixes
 
  - Para especializarse en navegadores viejos o hacer estilos propios para cada uno usar:
  
@@ -1204,19 +1313,19 @@ https://webdesign.tutsplus.com/es/tutorials/comprehensive-guide-when-to-use-em-v
 -moz-*
 -webkit-*
 ```
-## Autoprefixes
+### Autoprefixes
 
 - Se pueden usar @mixin's en Sass que hacen esta tarea manualmente
 - Pero usando herramientas tipo Grunt/Gulp/Compass podemos automatizar los Prefixes
  
-# Botones
+## Botones
 
  - Un botón debería ser un component independiente.
  - Recuerda que si el botón es un <a> tendrás que aplicarle un display block o inline-block.
  - Podemos usar funciones Sass lighten() y darken() para cambiar colores (por ejemplo para bordes)
  - Para usar otros botones similares usaríamos otra vez SMACS : `class="button button--pill"`
 
-# Colores RGBA
+## Colores RGBA
 
  - Son colores compuestos por red, green, blue y alpha (transparencia)
  - Para aplicar una sombra es mejor aplicar:
@@ -1226,51 +1335,8 @@ text-shadow: 1px, 1px, 1px, rgba(0,0,0,0.3);
 ```
 
 
+Next Readme's:
 
-# Icon Fonts (T12)
-
-## Sobre Tipografía
-
-Hasta aquí habrás aprendido todo lo immportante hasta tipografía :)
-
-## Sobre Shame.css
-
- - Hay gente que usa ese fichero para los hacks más asquerosos.
- - Yo no recomiendo hacerlo ya que al final siempre se va a quedar ahí.
- - Yo siento que es mejor meter el código en cuestión en el componente correcto.
-Ver `12-Icon-Fonts`
-
-
-## Ventajas de Icon Fonts
-
- - Escalan muy bien
- - Fácil de trabajar con ellos
-
-## Font Awesome
-
-Lista: https://fontawesome.com/icons?d=gallery&m=free
-
-### Instalación de una Font
-
-Puedes usar el CDN o bajarte los ficheros tu mismo.
-
-En los ficheros css podemos encontrar la línea @font-face que nos indica con que nombre referenciar el Font desde CSS
-
-Vemos que @font-face nos dice que los ficheros están en ../fonts ... por lo tanto instalamos en el root las fonts en /fonts/
-
-TODO:
-(creamos el fichero play, copiamos @font-face, lo metemos el play)
-
- 
-t12.16
-
-
----
-
-NOT SEEN
-10.1,  10.2,  10.4 estilando
-(t12.6 v.217) to (t.17 v.556)
-
-TODO: CODE
-T.19 - Acc
+ - (...)
+ - (...)
 

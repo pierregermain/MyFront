@@ -1,5 +1,3 @@
----
-
 # Accessibility (T19)
 
  - Tu HTML usado debe tener significado semántico. Cuando no hay significado semántico tendrás que usar los textos "alt"
@@ -137,7 +135,7 @@ https://www.w3.org/TR/aria-in-html/#recommendation-table
  - Muchas veces para arreglar los problemas tendrás que ponerte en contacto con el desarrollador tercero.
  
 
-Herramientas que me molan
+## Herramientas que me molan
 
 Deque Axe Tool: Tool para Firefox, Chrome y Cmd:
 https://www.deque.com/axe/
@@ -152,6 +150,3 @@ https://chrome.google.com/webstore/detail/wcag-accessibility-audit/kpfleokokmllc
 
 Screen Reader - Solo windows
 https://www.nvaccess.org/download/
-
-
----
