@@ -1,9 +1,6 @@
 # Accessibility (T19)
 
-Superguide
-
-# Superguide
-https://www.accessibility-developer-guide.com
+[Access To All Guide](https://www.accessibility-developer-guide.com)
 
  - Tu HTML usado debe tener significado semántico. Cuando no hay significado semántico tendrás que usar los textos "alt"
  - Las personas que más sufren con la web son los ciegos, pero también hay personas con otras discapacitades:
