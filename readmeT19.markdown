@@ -1,5 +1,7 @@
 # Accessibility (T19)
 
+[Access To All Guide](https://www.accessibility-developer-guide.com)
+
  - Tu HTML usado debe tener significado semántico. Cuando no hay significado semántico tendrás que usar los textos "alt"
  - Las personas que más sufren con la web son los ciegos, pero también hay personas con otras discapacitades:
    - los que no ven colores, los que no pueden usar un ratón, etc.
@@ -133,7 +135,7 @@ https://www.w3.org/TR/aria-in-html/#recommendation-table
 
  - Deben usar elementos ARIA
  - Muchas veces para arreglar los problemas tendrás que ponerte en contacto con el desarrollador tercero.
- 
+
 
 ## Herramientas que me molan
 
