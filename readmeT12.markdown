@@ -1,20 +1,32 @@
 # Icon Fonts (T12)
 
-## Sobre Tipografía
+Ver `12-Icon-Fonts`
 
-Hasta aquí habrás aprendido todo lo immportante hasta tipografía :)
+ - Una vez que ya tenemos toda nuestra font configurada en la web nos disponemos a estilizar los iconos.
+ - El icon Font mas famoso es "Font Awesome"
+ - Hay varias versiones de Font Awesome. Dentre de la Free Version tenemos para varios Lenguajes (por ejemplo Sass)
+ - Se puede instalar usando `npm install --save-dev @fortawesome/fontawesome-free`
+    - Te va a generar `package-lock.json` y la carpeta `node_modules/*`
+ - Manual para [referenciar](https://fontawesome.com/how-to-use/on-the-web/using-with/sass) desde Sass.
+ 
+ 
+ (v193)
+
+## Ventajas de Icon Fonts
+
+ - Escalan muy bien
+ - Fácil de trabajar con ellos
+ - Puedes cambiar el color
+ - Nada mas hace falta descargarlo una vez
+
 
 ## Sobre Shame.css
 
  - Hay gente que usa ese fichero para los hacks más asquerosos.
  - Yo no recomiendo hacerlo ya que al final siempre se va a quedar ahí.
  - Yo siento que es mejor meter el código en cuestión en el componente correcto.
-Ver `12-Icon-Fonts`
 
-## Ventajas de Icon Fonts
 
- - Escalan muy bien
- - Fácil de trabajar con ellos
 
 ## Font Awesome
 

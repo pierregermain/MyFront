@@ -1336,9 +1336,13 @@ https://webdesign.tutsplus.com/es/tutorials/comprehensive-guide-when-to-use-em-v
 text-shadow: 1px, 1px, 1px, rgba(0,0,0,0.3);
 ```
 
+## Botones con bordes redondeados
+ - Usaremos la clase .button con una nueva subclase .button--pill
+ - Al subcomponente .button-pill le pondremos el nuevo border-radius
+ 
+## Sobre Tipografía
 
-Next Readme's:
+Hasta aquí habrás aprendido todo lo immportante hasta tipografía :)
 
- - (...)
- - (...)
+(The End of T11)
 
