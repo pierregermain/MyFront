@@ -3,21 +3,30 @@
 Ver `12-Icon-Fonts`
 
  - Una vez que ya tenemos toda nuestra font configurada en la web nos disponemos a estilizar los iconos.
+ 
+ ## Ventajas de Icon Fonts
+ 
+  - Escalan muy bien
+  - Fácil de trabajar con ellos
+  - Puedes cambiar el color
+  - Nada mas hace falta descargarlo una vez
+  
+## Font Awesome
+
  - El icon Font mas famoso es "Font Awesome"
  - Hay varias versiones de Font Awesome. Dentre de la Free Version tenemos para varios Lenguajes (por ejemplo Sass)
  - Se puede instalar usando `npm install --save-dev @fortawesome/fontawesome-free`
     - Te va a generar `package-lock.json` y la carpeta `node_modules/*`
  - Manual para [referenciar](https://fontawesome.com/how-to-use/on-the-web/using-with/sass) desde Sass.
+ - En cuanto a lo que se habrá bajado con npm:
+   - Los Fonts estarán en `/node_modules/@fortawesome/fontawesome-free/webfonts`
+   - Los Css estarán en `node_modules/@fortawesome/fontawesome-free/css`
  
  
- (v193)
 
-## Ventajas de Icon Fonts
+v.194
 
- - Escalan muy bien
- - Fácil de trabajar con ellos
- - Puedes cambiar el color
- - Nada mas hace falta descargarlo una vez
+
 
 
 ## Sobre Shame.css
@@ -28,9 +37,6 @@ Ver `12-Icon-Fonts`
 
 
 
-## Font Awesome
-
-Lista: https://fontawesome.com/icons?d=gallery&m=free
 
 ### Instalación de una Font
 
