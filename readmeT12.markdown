@@ -42,32 +42,13 @@ Para probar @font-face podemos meterlo en nuestro fichero sass temp.scss
 ### Uso de Font Awesome desde Local
 
 La manera más fácil de probar Fontawesome es bajando los siguientes ficheros:
- - Por un lado dejas en /css/all.css el fichero all.css de los webfont(puedes cambiarle el nombre si quieres)
+ - Por un lado dejas en /css/all.css el fichero all.css (puedes cambiarle el nombre si quieres)
  - Por otro lado dejas en /webfonts los ficheros font (ficheros *eot, *svg, *woff, etc.)
  - Finalmente desde del <head> referencias el fichero all.css usando `<link rel="stylesheet" href="css/all.css">`
 
+Para probarlo nada mas usa por ejemplo `<i class="fas fa-phone"></i>`
+También se puede usar código hexadecimal tipo `&#xf1e2` (En realidad el icono sería `f1e2`)
 
+Ahora puedes cambiar el tamaño y el color usando propiedades de font (text-shadow por ejemplo)
 
-Para usar un icono se puede hacer de varias formas. Por ejmplo para una bomba:
-
-https://fontawesome.com/icons/bomb?style=solid
-
-
-
-v.198
-
-
-### Instalación de una Font
-
-Puedes usar el CDN o bajarte los ficheros tu mismo.
-
-
-TODO:
-(creamos el fichero play, copiamos @font-face, lo metemos el play)
-
- 
-t12.16
-
-
-TODO: CODE
-T.19 - Acc
+v.199
