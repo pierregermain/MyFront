@@ -23,28 +23,44 @@ Ver `12-Icon-Fonts`
    - Los Css estarán en `node_modules/@fortawesome/fontawesome-free/css`
  
  
+### Caracteristicas
 
-v.194
+Si abres algunos ficheros css puedes ver al principio el @font-face { (...) }. 
+Ahí está definido el nombre de la nueva font y la ruta a la font.
+Se supone que no tenemos que saber de eso al no ser que vayamos a crear una nueva font.
 
 
+## Sobre Shame.css o Temp.scss
 
-
-## Sobre Shame.css
-
+ - Por ahora para probar la font vamos a crear un fichero shame.css
  - Hay gente que usa ese fichero para los hacks más asquerosos.
  - Yo no recomiendo hacerlo ya que al final siempre se va a quedar ahí.
  - Yo siento que es mejor meter el código en cuestión en el componente correcto.
 
+Para probar @font-face podemos meterlo en nuestro fichero sass temp.scss
 
+### Uso de Font Awesome desde Local
+
+La manera más fácil de probar Fontawesome es bajando los siguientes ficheros:
+ - Por un lado dejas en /css/all.css el fichero all.css de los webfont(puedes cambiarle el nombre si quieres)
+ - Por otro lado dejas en /webfonts los ficheros font (ficheros *eot, *svg, *woff, etc.)
+ - Finalmente desde del <head> referencias el fichero all.css usando `<link rel="stylesheet" href="css/all.css">`
+
+
+
+Para usar un icono se puede hacer de varias formas. Por ejmplo para una bomba:
+
+https://fontawesome.com/icons/bomb?style=solid
+
+
+
+v.198
 
 
 ### Instalación de una Font
 
 Puedes usar el CDN o bajarte los ficheros tu mismo.
 
-En los ficheros css podemos encontrar la línea @font-face que nos indica con que nombre referenciar el Font desde CSS
-
-Vemos que @font-face nos dice que los ficheros están en ../fonts ... por lo tanto instalamos en el root las fonts en /fonts/
 
 TODO:
 (creamos el fichero play, copiamos @font-face, lo metemos el play)
