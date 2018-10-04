@@ -1,3 +1,13 @@
+.icon {
+  &--circle {
+    display:inline-block;
+    padding: 30px;
+    border-radius: 4em;
+    color: white;
+    background-color: purple;
+    font-size: 40px;
+  }
+}
 .icon_box {
   background-color: #e8e8e8;
   > p { // TODO: Unify paragraph styles
