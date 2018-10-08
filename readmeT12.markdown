@@ -51,7 +51,7 @@ También se puede usar código hexadecimal tipo `&#xf1e2` (En realidad el icono 
 
 Ahora puedes cambiar el tamaño y el color usando propiedades de font (text-shadow por ejemplo)
 
-## Figuras en CSS
+## Figuras en CSS - Creando un círculo con iconitos dentro
 
 Hay veces que vas a tener que hacer figuras manualmente usando css ya que no encuentras o no merece la pena usar un Icon-Font para ello.
 
@@ -61,6 +61,9 @@ Ej.)
 display:inline-block;
 border-radius: 4em;
 background-color: purple;
+text-align: center; // en caso de usar icon fonts dentro del círculo
+width: 40px;
 ```
 
-v.202
+
+t12 v.13

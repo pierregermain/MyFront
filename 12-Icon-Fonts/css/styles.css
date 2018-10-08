@@ -25,14 +25,6 @@ h1, h2, h3 {
     font-size: 20px;
     text-shadow: none; }
 
-.icon--circle {
-  display: inline-block;
-  padding: 30px;
-  border-radius: 4em;
-  color: white;
-  background-color: purple;
-  font-size: 40px; }
-
 .icon_box {
   background-color: #e8e8e8; }
   .icon_box > p {
@@ -46,6 +38,24 @@ h1, h2, h3 {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: .04em; }
+  .icon_box-icon {
+    font-family: FontAwesome;
+    display: inline-block;
+    padding: 1.875rem;
+    background-color: purple;
+    border-radius: 4em;
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    width: 3.125rem; }
+  .icon_box--passion .icon_box-icon {
+    background-color: #a8228e; }
+  .icon_box--speed .icon_box-icon {
+    background-color: #0065b2; }
+  .icon_box--creativity .icon_box-icon {
+    background-color: #99CC22; }
+  .icon_box--magic .icon_box-icon {
+    background-color: #f58220; }
 
 .section_hero-title {
   font-size: 2.125rem;
