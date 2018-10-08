@@ -65,5 +65,18 @@ text-align: center; // en caso de usar icon fonts dentro del círculo
 width: 40px;
 ```
 
+## Añadir contenido con Css
 
-t12 v.13
+Es posible añadir contenido mediante CSS usando :before y :after
+
+En el caso de los iconos se haría de la siguiente forma (usando Unicode) (no me ha funcionado)
+
+```
+&:before{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f095";
+}
+```
+
+t12 v.19
