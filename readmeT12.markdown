@@ -123,9 +123,71 @@ Esto nos hace los siguiente:
  - crea el fichero `package.json`
 
 
+### Uso minimalista de Font Awesome
 
-
+Si sólo necesitas algunos iconitos de Font Awesome puedes importar de la siguiente forma Font Awesome desde tu `styles.scss`
  
+```
+@import "../node_modules/fontawesome/scss/variables";
+@import "../node_modules/fontawesome/scss/mixins";
+@import "../node_modules/fontawesome/scss/core";
+@import "../node_modules/fontawesome/scss/icons";
+```
+
+Eso haría que uses menos código css compilado.
+
+## Cons de usar Font Awesome
+
+Lo malo de usar Font Awesome es que vamos a tener un montón de iconitos que no necesitamos
+
+Ahora mismo podemos bajar desde la propia web de fontawesome el svg del iconito que necesitamos.
+
+Lo suyo es que hagamos nuestra `propia` font usando por ejemplo `Fontastic`, servicio online para hacer tu propia font
+
+
+# [Fontastic](http://fontastic.me/)
+
+PROS:
+ - Sirve para crear fuentes de iconos personalizables.
+   - Ahorramos espacio!
+   
+CONS:
+ - Tienes que gestionar tu font
+ - Tienes que gestionar tu css
+
+MANUAL:
+
+ - Una vez online le das a "New Font"
+   - Desde "Customize" tenemos la opción de usar iconos de Font Awesome
+   - Una vez seleccionado los iconos que necesitemos le damos a "Publish" y Download
+ - Es posible hacer upload de nuestras Fonts dandole a "Import Icons"
+
+
+# [Symbolset](https://symbolset.com/)
+
+ - Convierte automáticamente texto a iconos (usando tecnología de ligaduras)
+ - Podría ser muy bueno para Screen Readers (pero no creo que funcione con multilang)
+ - OJO: Al user ligaduras no puedes usarlo con Fontastic
+ 
+# Búsqueda de Buenas Fonts
+
+Simplemente busca "free web fonts". Recomendamos:
+
+ - [fontsquirre](https://www.fontsquirrel.com/)
+   - Puedes buscar por tags y tipo de fonts
+   - Te dice en que dipositivo se puede usar
+   - Bajas la Font y luego le das a "generate"
+   - Eso te genera el css con el `@font-face` necesario
+   - VENTAJA: Instalamos la font en local
+ - [Google Fonts](https://fonts.google.com/)
+  - Buscamos la font (por ejemplo Roboto)
+  - Le damos a "Add" y "Use" seleccionando los weights (cuanto más selecciones mas pesado será la font)
+  - Nos genera el <link> externo a meter en el head del html
+  - VENTAJA: No necesitamos gestionar la font
+  
+  
  
 
-t12 v.24
+
+
+t12 v.34
