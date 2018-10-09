@@ -46,7 +46,12 @@ La manera más fácil de probar Fontawesome es bajando los siguientes ficheros:
  - Por otro lado dejas en /webfonts los ficheros font (ficheros *eot, *svg, *woff, etc.)
  - Finalmente desde del <head> referencias el fichero all.css usando `<link rel="stylesheet" href="css/all.css">`
 
-Para probarlo nada mas usa por ejemplo `<i class="fas fa-phone"></i>`
+Para probarlo nada mas usa por ejemplo `<i class="fas fa-phone"></i>`. 
+- Lo malo de usarlo así es que debes importar todo el framework de la font.
+- Pero hacerlo así nos da mucho poder de hacer todo desde el markup.
+- Ejemplos: https://fontawesome.com/v4.7.0/examples/
+
+
 También se puede usar código hexadecimal tipo `&#xf1e2` (En realidad el icono sería `f1e2`)
 
 Ahora puedes cambiar el tamaño y el color usando propiedades de font (text-shadow por ejemplo)
@@ -79,4 +84,48 @@ En el caso de los iconos se haría de la siguiente forma (usando Unicode) (no me
 }
 ```
 
-t12 v.19
+## Sobre Frameworks (Bootstrap y Awesome)
+
+ - `Awesome` y `Boostrap` funcionan muy bien conjuntamente
+ 
+ - PROS:
+   - Rapido para crear prototipos
+   - Consistencia
+   - Bonito
+   
+ - CONS:
+   - Mucho CSS no necesario
+   - Mucha customización si hay que seguir un diseño
+   - Semántica: Muchas clases que no sirven para la Accesibilidad (por ejemplo el <i> tag no lo entiende el Screen Reader)
+   
+ - Expertos no deberían usar Bootstrap ni Awesome ni otros frameworks similares.
+ 
+Básicamente si sólo vas a usar algunas partes del framework entonces no merece la pena importar todo el framework entero.
+
+## Yarn en vez de Bower
+
+En vez de usar Bower deberíamos usar Yarn.
+
+Primero instalamos Yarn tal cómo viene explicado en la web oficial.
+
+Una vez que tengamos instalado Yarn instalamos los paquetes con Yarn (Mirar doc. oficial)
+
+En nuestro caso que estamos usando normalize.css y font awesome haríámos
+
+```
+yarn add normalize.css
+yarn add --dev @fortawesome/fontawesome-free
+```
+
+Esto nos hace los siguiente:
+ - baja los paquetes al directorio `node_modules`
+ - crea el fichero `yarn.lock`
+ - crea el fichero `package.json`
+
+
+
+
+ 
+ 
+
+t12 v.24
