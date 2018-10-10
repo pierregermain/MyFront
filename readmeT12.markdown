@@ -74,7 +74,7 @@ width: 40px;
 
 Es posible añadir contenido mediante CSS usando :before y :after
 
-En el caso de los iconos se haría de la siguiente forma (usando Unicode) (no me ha funcionado)
+En el caso de los iconos se haría de la siguiente forma (usando Unicode)
 
 ```
 &:before{
@@ -186,8 +186,8 @@ Simplemente busca "free web fonts". Recomendamos:
   - VENTAJA: No necesitamos gestionar la font
   
   
- 
 
 
 
-t12 v.34
+
+t12 v.35

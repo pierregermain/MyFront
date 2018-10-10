@@ -23,4 +23,16 @@
 
     }
   }
+  &-account_link {
+    &:hover, &:visited, &:link, &:active {
+      color: $medium-dark-gray;
+      text-decoration: none;
+      font-size: px2em(18);
+      &:before {
+        font-family: "Font Awesome 5 Free";
+        content: "\f007";
+        margin-right: 0.3em;
+      }
+    }
+  }
 }
