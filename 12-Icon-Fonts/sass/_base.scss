@@ -6,3 +6,16 @@ body {
 h1, h2, h3 {
   font-weight: $default-font-weight;
 }
+
+// WCAG
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.display-none {
+  display: none;
+}

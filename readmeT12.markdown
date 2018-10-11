@@ -184,10 +184,7 @@ Simplemente busca "free web fonts". Recomendamos:
   - Le damos a "Add" y "Use" seleccionando los weights (cuanto más selecciones mas pesado será la font)
   - Nos genera el <link> externo a meter en el head del html
   - VENTAJA: No necesitamos gestionar la font
-  
-  
 
 
 
-
-t12 v.35
+t12 v.40

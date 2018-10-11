@@ -5,6 +5,17 @@ body {
 h1, h2, h3 {
   font-weight: 100; }
 
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden; }
+
+.display-none {
+  display: none; }
+
 .button {
   display: inline-block;
   text-transform: uppercase;
@@ -100,6 +111,17 @@ h1, h2, h3 {
     padding-top: 0.8125em; }
     .site_footer-nav--alt a:hover, .site_footer-nav--alt a:visited, .site_footer-nav--alt a:link, .site_footer-nav--alt a:active {
       color: #aeaeae; }
+  .site_footer i.fa-phone, .site_footer i.fa-address-card {
+    margin-right: .35em; }
+  .site_footer .site_footer-social_nav a {
+    display: inline-block; }
+  .site_footer .site_footer-social_nav i {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    color: #515151;
+    background-color: white;
+    border-radius: 3em;
+    text-align: center; }
 
 .site_header-bottom {
   background-color: #e8e8e8;
@@ -121,8 +143,9 @@ h1, h2, h3 {
   font-size: 1.125em; }
   .site_header-account_link:hover:before, .site_header-account_link:visited:before, .site_header-account_link:link:before, .site_header-account_link:active:before {
     font-family: "Font Awesome 5 Free";
+    font-size: .8em;
     content: "\f007";
-    margin-right: 0.3em; }
+    margin-right: .35em; }
 
 .slide {
   background-color: #515151;

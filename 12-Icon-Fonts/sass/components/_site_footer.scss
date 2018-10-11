@@ -35,4 +35,26 @@
       }
     }
   }
+  i.fa-phone, i.fa-address-card {
+    margin-right: .35em;
+  }
+  .site_footer-social_nav {
+    a {
+      display: inline-block;
+
+    }
+
+    i {
+      $size: 25;
+      width:px2rem($size);
+      height: px2rem($size);
+
+      color: $dark-gray;
+      background-color: $white;
+      border-radius: 3em;
+      //font-size: px2rem(18);
+      //padding: px2rem(6);
+      text-align: center;
+    }
+  }
 }
