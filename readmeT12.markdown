@@ -185,6 +185,9 @@ Simplemente busca "free web fonts". Recomendamos:
   - Nos genera el <link> externo a meter en el head del html
   - VENTAJA: No necesitamos gestionar la font
 
+# Uso de Iconitos
+
+Recomendamos usar `box-sizing: border-box` para centrar bien iconitos en cajas contenedoras de iconos (por ejemplo iconitos de links sociales) que ya tengan el width, height y padding configurados.
 
 
 t12 v.40
