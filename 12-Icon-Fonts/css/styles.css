@@ -116,13 +116,14 @@ h1, h2, h3 {
   .site_footer .site_footer-social_nav a {
     display: inline-block; }
   .site_footer .site_footer-social_nav i {
+    box-sizing: border-box;
     width: 1.5625rem;
     height: 1.5625rem;
+    line-height: 1.5625rem;
     color: #515151;
     background-color: white;
     border-radius: 3em;
     text-align: center;
-    box-sizing: border-box;
     padding-top: 3px; }
 
 .site_header-bottom {
