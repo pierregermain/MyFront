@@ -43,8 +43,8 @@ Para probar @font-face podemos meterlo en nuestro fichero sass temp.scss
 
 La manera más fácil de probar Fontawesome es bajando los siguientes ficheros:
  - Por un lado dejas en /css/all.css el fichero all.css (puedes cambiarle el nombre si quieres)
- - Por otro lado dejas en /webfonts los ficheros font (ficheros *eot, *svg, *woff, etc.)
- - Finalmente desde del <head> referencias el fichero all.css usando `<link rel="stylesheet" href="css/all.css">`
+ - Por otro lado dejas en /webfonts los ficheros font (ficheros `*eot`, `*svg`, `*woff`, etc.)
+ - Finalmente desde el `<head>` referencias el fichero all.css usando `<link rel="stylesheet" href="css/all.css">`
 
 Para probarlo nada mas usa por ejemplo `<i class="fas fa-phone"></i>`. 
 - Lo malo de usarlo así es que debes importar todo el framework de la font.
@@ -96,7 +96,7 @@ En el caso de los iconos se haría de la siguiente forma (usando Unicode)
  - CONS:
    - Mucho CSS no necesario
    - Mucha customización si hay que seguir un diseño
-   - Semántica: Muchas clases que no sirven para la Accesibilidad (por ejemplo el <i> tag no lo entiende el Screen Reader)
+   - Semántica: Muchas clases que no sirven para la Accesibilidad (por ejemplo el `<i>` tag no lo entiende el Screen Reader)
    
  - Expertos no deberían usar Bootstrap ni Awesome ni otros frameworks similares.
  
@@ -187,7 +187,18 @@ Simplemente busca "free web fonts". Recomendamos:
 
 # Uso de Iconitos
 
-Recomendamos usar `box-sizing: border-box` para centrar bien iconitos en cajas contenedoras de iconos (por ejemplo iconitos de links sociales) que ya tengan el width, height y padding configurados.
+## Uso de box-sizing
+
+ - Recordemos que la **altura** de un elemento se calcula sumando:
+    `height` + `padding` + `border-size`.
+
+ - Recomendamos usar `box-sizing: border-box` para centrar bien iconitos en cajas contenedoras de iconos (por ejemplo iconitos de links sociales) que ya tengan el width, height y padding configurados.
+
+ - Usar box-sizing hace que el `height` y `width` sean definidos por las propiedades `height` y `width`. Al hacer esto los `padding` y `border-size` se quitan a los valores `height` y `width` en vez de sumarlos.
+
+ - Además al tratarse de fonts podemos usar la propiedad `line-height: 1.5em` para centrar bien el iconito en el centro (donde 1.5em es el valor original del heights) 
 
 
-t12 v.40
+
+
+t12 v.41
