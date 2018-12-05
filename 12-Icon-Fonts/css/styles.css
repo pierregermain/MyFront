@@ -111,20 +111,19 @@ h1, h2, h3 {
     padding-top: 0.8125em; }
     .site_footer-nav--alt a:hover, .site_footer-nav--alt a:visited, .site_footer-nav--alt a:link, .site_footer-nav--alt a:active {
       color: #aeaeae; }
+  .site_footer-social_nav > a {
+    display: inline-block; }
+    .site_footer-social_nav > a > i {
+      box-sizing: border-box;
+      width: 1.5625rem;
+      height: 1.5625rem;
+      line-height: 1.5625rem;
+      color: #515151;
+      background-color: white;
+      border-radius: 3em;
+      text-align: center; }
   .site_footer i.fa-phone, .site_footer i.fa-address-card {
     margin-right: .35em; }
-  .site_footer .site_footer-social_nav a {
-    display: inline-block; }
-  .site_footer .site_footer-social_nav i {
-    box-sizing: border-box;
-    width: 1.5625rem;
-    height: 1.5625rem;
-    line-height: 1.5625rem;
-    color: #515151;
-    background-color: white;
-    border-radius: 3em;
-    text-align: center;
-    padding-top: 3px; }
 
 .site_header-bottom {
   background-color: #e8e8e8;
