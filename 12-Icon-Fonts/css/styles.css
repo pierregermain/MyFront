@@ -112,8 +112,10 @@ h1, h2, h3 {
     .site_footer-nav--alt a:hover, .site_footer-nav--alt a:visited, .site_footer-nav--alt a:link, .site_footer-nav--alt a:active {
       color: #aeaeae; }
   .site_footer-social_nav > a {
-    display: inline-block; }
+    display: inline-block;
+    margin: 0 .1em 0 .1em; }
     .site_footer-social_nav > a > i {
+      font-size: 1rem;
       box-sizing: border-box;
       width: 1.5625rem;
       height: 1.5625rem;

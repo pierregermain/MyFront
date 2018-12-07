@@ -38,8 +38,10 @@
   &-social_nav {
     > a {
       display: inline-block;
+      margin: 0 .1em 0 .1em;
       > i {
         $size: 25;
+        font-size: px2rem(.64 * $size);
         box-sizing: border-box;
         width:px2rem($size);
         height: px2rem($size);

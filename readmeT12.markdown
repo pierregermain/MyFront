@@ -198,7 +198,11 @@ Simplemente busca "free web fonts". Recomendamos:
 
  - Además al tratarse de fonts podemos usar la propiedad `line-height: 1.5em` para centrar bien el iconito en el centro (donde 1.5em es el valor original del heights) 
 
+## Tamaño relativo a la caja contenedora
 
-
-
-t12 v.41
+```
+i{
+  $size: 50px;
+  font-size: px2rem(.64 * $size);
+}
+```
