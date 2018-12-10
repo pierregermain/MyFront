@@ -1,8 +1,10 @@
 # Forms
 
- - Search with Google for [Html Forms](https://www.google.com/search?q=html+forms) for a first impression howto make a form in html.
+ - Search with Google for [Html Forms](https://www.google.com/search?q=html+forms) for a first impression howto make a form with html.
 
- - understand `<input>`
+Basic Points:
+
+ - understand `<input>` is a void element
  - understand the method attribute:
    GET (Data send is visible in the browser)
    ```
