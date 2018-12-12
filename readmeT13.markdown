@@ -16,8 +16,12 @@ Basic Points:
    <form action="/action_page.php" method="post"> 
    ``` 
    
-## Submit Button
+## Style a Submit Button
 
+If we have already a `button` class applied to links we could apply it to our <input>. Usually it makes sense to use the same style for <input> and links if they represent a button.
 
+## Style a Comments Box
 
-t13 v2
+We will use `box-sizing: border-box;` to allign the easy way the width with the other elements.
+
+t13 v7

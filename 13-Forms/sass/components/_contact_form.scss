@@ -1,4 +1,18 @@
 .contact_form {
-  &-submit{
+  width: px2rem(472);
+
+  &-comment {
+    background-color: $light-gray;
+    border: $medium-gray 1px solid;
+    box-sizing: border-box;
+    border-radius: 5px;
+    letter-spacing: .1rem;
+    padding: 15px 28px;
+    font-size: px2rem(18);
+    height: px2rem(150);
+    width: 100%;
+  }
+  &-submit {
+    width: 100%;
   }
 }

@@ -9,6 +9,9 @@
   text-decoration: none;
   border-top: lighten($color, 20%) 1px solid;
   border-bottom: darken($color, 15%) 1px solid;
+  border-right: none;
+  border-left: none;
+  color: $white;
   text-shadow: 1px, 1px, 1px, rgba(0,0,0,0.3);
   &:hover, &:visited, &:link, &:active {
     color: $white;
