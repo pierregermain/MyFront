@@ -41,6 +41,15 @@ h1, h2, h3 {
 
 .contact_form {
   width: 29.5rem; }
+  .contact_form-interest {
+    background-color: #e8e8e8;
+    border: #DADADA 1px solid;
+    box-sizing: border-box;
+    letter-spacing: .1rem;
+    padding: 0px 28px;
+    font-size: 1.125rem;
+    height: 2.8125rem;
+    width: 100%; }
   .contact_form-comment {
     background-color: #e8e8e8;
     border: #DADADA 1px solid;

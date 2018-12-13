@@ -1,6 +1,17 @@
 .contact_form {
   width: px2rem(472);
 
+  &-interest {
+    background-color: $light-gray;
+    border: $medium-gray 1px solid;
+    box-sizing: border-box;
+    letter-spacing: .1rem;
+    padding: 0px 28px;
+    font-size: px2rem(18);
+    height: px2rem(45);
+    width: 100%;
+  }
+
   &-comment {
     background-color: $light-gray;
     border: $medium-gray 1px solid;

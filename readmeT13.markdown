@@ -24,4 +24,12 @@ If we have already a `button` class applied to links we could apply it to our <i
 
 We will use `box-sizing: border-box;` to allign the easy way the width with the other elements.
 
-t13 v7
+## Style a Select Box
+
+ - Hard to style for multiplatform.
+ - It's easier to use radio buttons.
+ - The easiest way is to use a 3rd library.
+
+
+
+t13 v12
