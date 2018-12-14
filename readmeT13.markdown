@@ -30,6 +30,9 @@ We will use `box-sizing: border-box;` to allign the easy way the width with the 
  - It's easier to use radio buttons.
  - The easiest way is to use a 3rd library.
 
+### 3rd Party Libraries for replacing a select box
 
+ - We will use [selectize.js](http://selectize.github.io/selectize.js/)
+ - We will install it with our package manager (bower)
 
-t13 v12
+t13 v13
