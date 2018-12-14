@@ -1,29 +1,41 @@
-.contact_form {
-  width: px2rem(472);
-
-  &-interest {
-    background-color: $light-gray;
-    border: $medium-gray 1px solid;
-    box-sizing: border-box;
-    letter-spacing: .1rem;
-    padding: 0px 28px;
-    font-size: px2rem(18);
-    height: px2rem(45);
-    width: 100%;
-  }
-
-  &-comment {
+%gray-input {
     background-color: $light-gray;
     border: $medium-gray 1px solid;
     box-sizing: border-box;
     border-radius: 5px;
+    display: block;
     letter-spacing: .1rem;
+    margin: 1em 0;
     padding: 15px 28px;
     font-size: px2rem(18);
-    height: px2rem(150);
     width: 100%;
+}
+.contact_form {
+  width: px2rem(472);
+
+  &-name, &-email {
+    @extend %gray-input;
+  }
+
+  &-comment {
+    @extend %gray-input;
+    height: px2rem(150);
   }
   &-submit {
     width: 100%;
+  }
+}
+
+div.contact_form-interest {
+  .selectize-input {
+    background-color: $light-gray;
+    border: $medium-gray 1px solid;
+    padding: 15px 28px;
+    box-shadow: none;
+
+    input {
+      font-size: px2rem(18);
+      letter-spacing: .1rem;
+    }
   }
 }

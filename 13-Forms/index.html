@@ -8,17 +8,34 @@
     <link href="node_modules/normalize.css/normalize.css" rel="stylesheet" type="text/css"/>
     <link href="css/styles.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="bower_components/sifter/sifter.js"></script>
+<script type="text/javascript" src="bower_components/microplugin/src/microplugin.js"></script>
+<script type="text/javascript" src="bower_components/selectize/dist/js/selectize.js"></script>
+<link rel="stylesheet" type="text/css" href="bower_components/selectize/dist/css/selectize.css" />
+<script>
+
+$(function() {
+	$('select').selectize();
+});
+</script>
+
 </head>
 
 <body>
 
   <form class="contact_form" action="#" method="post">
+
+    <input type="text" class="contact_form-name" name="name" placeholder="Your name">
+    <input type="text" class="contact_form-email" name="email" placeholder="Your Email">
+
     <select class="contact_form-interest" name="interest">
-      <option value=""> I am interested in... (Please select)
-      </option>
-      <option value="">More information</option>
-      <option value="">Help with a product</option>
+      <option value="">I am interested in... (please select)</option>
+      <option value="info">More information</option>
+      <option value="help">Help with a product</option>
     </select>
+
     <textarea class="contact_form-comment" name="comments" placeholder="Add comments here"></textarea>
     <input type="submit" value="Send" class="contact_form-submit button">
   </form>

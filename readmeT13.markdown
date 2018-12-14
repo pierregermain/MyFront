@@ -34,5 +34,33 @@ We will use `box-sizing: border-box;` to allign the easy way the width with the 
 
  - We will use [selectize.js](http://selectize.github.io/selectize.js/)
  - We will install it with our package manager (bower)
+ - We test it inserting the script at the beginning of our index.html
 
-t13 v13
+
+### JS Polyfill
+
+ - To fill gaps of browser support for new features.
+
+For example if you need to have *placeholder* function on all browsers, first you will search *can i use placeholder* to see if there is support. If there is NOT support you will need to search *placeholder polyfill*.
+
+Usually you will need to install this polyfill with your package manager (*bower install placeholders*)
+
+You will need to add this polyfill at the end of your `<body>` of your index.html
+
+## Using Extend for elements
+
+It is okey to use extend if you think that it is possible that you will not use that classes in the future.
+
+Example:
+
+```(css)
+%gray-input {
+    background-color: $light-gray;
+    border: $medium-gray 1px solid;
+}
+.my-gray-input {
+    @extend %gray-input;
+}
+```
+
+t13 v27

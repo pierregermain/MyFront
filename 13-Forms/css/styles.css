@@ -39,29 +39,33 @@ h1, h2, h3 {
     font-size: 20px;
     text-shadow: none; }
 
+.contact_form-name, .contact_form-email, .contact_form-comment {
+  background-color: #e8e8e8;
+  border: #DADADA 1px solid;
+  box-sizing: border-box;
+  border-radius: 5px;
+  display: block;
+  letter-spacing: .1rem;
+  margin: 1em 0;
+  padding: 15px 28px;
+  font-size: 1.125rem;
+  width: 100%; }
+
 .contact_form {
   width: 29.5rem; }
-  .contact_form-interest {
-    background-color: #e8e8e8;
-    border: #DADADA 1px solid;
-    box-sizing: border-box;
-    letter-spacing: .1rem;
-    padding: 0px 28px;
-    font-size: 1.125rem;
-    height: 2.8125rem;
-    width: 100%; }
   .contact_form-comment {
-    background-color: #e8e8e8;
-    border: #DADADA 1px solid;
-    box-sizing: border-box;
-    border-radius: 5px;
-    letter-spacing: .1rem;
-    padding: 15px 28px;
-    font-size: 1.125rem;
-    height: 9.375rem;
-    width: 100%; }
+    height: 9.375rem; }
   .contact_form-submit {
     width: 100%; }
+
+div.contact_form-interest .selectize-input {
+  background-color: #e8e8e8;
+  border: #DADADA 1px solid;
+  padding: 15px 28px;
+  box-shadow: none; }
+  div.contact_form-interest .selectize-input input {
+    font-size: 1.125rem;
+    letter-spacing: .1rem; }
 
 .icon_box {
   background-color: #e8e8e8; }
