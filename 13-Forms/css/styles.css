@@ -54,17 +54,30 @@ h1, h2, h3 {
   width: 100%; }
 
 .contact_form {
+  margin-right: auto;
+  margin-left: auto;
   width: 29.5rem; }
-  .contact_form-type i {
-    color: #0065b2;
-    margin-right: .1em; }
-  .contact_form-type label {
-    font-size: 1.125rem;
+  .contact_form-type_label {
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-align: center;
     letter-spacing: .1em; }
-  .contact_form-type input[type="radio"]:checked + label i:before {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "\f058"; }
+  .contact_form-type {
+    text-align: center; }
+    .contact_form-type i {
+      color: #e8e8e8;
+      margin-right: .1em; }
+    .contact_form-type label {
+      font-size: 1.125rem;
+      letter-spacing: .1em;
+      margin: 0 0.875rem; }
+    .contact_form-type input[type="radio"] {
+      display: none; }
+    .contact_form-type input[type="radio"]:checked + label i:before {
+      color: #0065b2;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f058"; }
   .contact_form-comment {
     height: 9.375rem; }
   .contact_form-submit {

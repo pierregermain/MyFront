@@ -91,7 +91,10 @@ input[type="radio"]:checked + label i {
 
 ```
 
+## Search Form
+
+With Frontend Frameworks like Bootstrap a Search Form is easy to style.
 
 
 t13 
-v33
+v42

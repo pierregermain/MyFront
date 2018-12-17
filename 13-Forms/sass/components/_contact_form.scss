@@ -13,20 +13,37 @@
     width: 100%;
 }
 .contact_form {
+
+  margin-right: auto;
+  margin-left: auto;
+
   width: px2rem(472);
 
+  &-type_label {
+    font-size: px2rem(20);
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: .1em;
+  }
+
   &-type {
+    text-align: center;
     i {
-      color: $blue;
+      color: $light-gray;
       margin-right: .1em;
 
     }
     label {
       font-size: px2rem(18);
       letter-spacing: .1em;
+      margin: 0 px2rem(14);
+    }
+    input[type="radio"] {
+      display: none;
     }
     input[type="radio"]:checked + label i {
       &:before {
+        color: $blue;
         font-family: "Font Awesome 5 Free";
         font-weight: 900;
         content: "\f058";
