@@ -1,24 +1,47 @@
-%gray-input {
+%contact_form---gray_input_input {
+    font-size: px2rem(18);
+    letter-spacing: .1rem;
+}
+%contact_form---gray_input_box {
     background-color: $light-gray;
     border: $medium-gray 1px solid;
     box-sizing: border-box;
     border-radius: 5px;
     display: block;
-    letter-spacing: .1rem;
     margin: 1em 0;
     padding: 15px 28px;
-    font-size: px2rem(18);
     width: 100%;
 }
 .contact_form {
   width: px2rem(472);
 
+  &-type {
+    i {
+      color: $blue;
+      margin-right: .1em;
+
+    }
+    label {
+      font-size: px2rem(18);
+      letter-spacing: .1em;
+    }
+    input[type="radio"]:checked + label i {
+      &:before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f058";
+      }
+    }
+  }
+
   &-name, &-email {
-    @extend %gray-input;
+    @extend %contact_form---gray_input_input;
+    @extend %contact_form---gray_input_box;
   }
 
   &-comment {
-    @extend %gray-input;
+    @extend %contact_form---gray_input_input;
+    @extend %contact_form---gray_input_box;
     height: px2rem(150);
   }
   &-submit {
@@ -28,14 +51,11 @@
 
 div.contact_form-interest {
   .selectize-input {
-    background-color: $light-gray;
-    border: $medium-gray 1px solid;
-    padding: 15px 28px;
+    @extend %contact_form---gray_input_box;
     box-shadow: none;
 
     input {
-      font-size: px2rem(18);
-      letter-spacing: .1rem;
+      @extend %contact_form---gray_input_input;
     }
   }
 }

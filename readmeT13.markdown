@@ -51,16 +51,47 @@ You will need to add this polyfill at the end of your `<body>` of your index.htm
 
 It is okey to use extend if you think that it is possible that you will not use that classes in the future.
 
-Example:
+Example with a nice convention for naming the extends
 
 ```(css)
-%gray-input {
+%contact_form---gray_input_box {
     background-color: $light-gray;
-    border: $medium-gray 1px solid;
+}
+%contact_form---gray_input_box {
+    color: $dark-gray;
 }
 .my-gray-input {
-    @extend %gray-input;
+    @extend %contact_form---gray_input_input;
+    @extend %contact_form---gray_input_box;
 }
 ```
 
-t13 v27
+## Using Display Block
+
+It is okey to change the display to `display:block` to the elements of the Form so that it is easier to manage the margins.
+
+## Radio Buttons
+
+You have to use <label> using the `for` attribute with <input> of `type="radio" with the `id` attribute
+
+### Customize a Radio Button
+
+We style the <label> and hide the <input>
+
+To select the input that has been selected we use
+
+```
+input[type="radio"]:checked + label i {
+  &:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f058";
+  }
+}
+
+```
+
+
+
+t13 
+v33

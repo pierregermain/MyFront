@@ -27,6 +27,17 @@ $(function() {
 
   <form class="contact_form" action="#" method="post">
 
+    <div class="contact_form-type">
+      <input type="radio" name="type" id="contact_form-client" value="client">
+      <label for="contact_form-client"><i class="far fa-circle"></i>Client</label>
+
+      <input type="radio" name="type" id="contact_form-partner" value="partner">
+      <label for="contact_form-partner"><i class="far fa-circle"></i>Partner</label>
+
+      <input type="radio" name="type" id="contact_form-curious" value="curious">
+      <label for="contact_form-curious"><i class="far fa-circle"></i>Curious</label>
+    </div>
+
     <input type="text" class="contact_form-name" name="name" placeholder="Your name">
     <input type="text" class="contact_form-email" name="email" placeholder="Your Email">
 
