@@ -1,0 +1,22 @@
+.search_form {
+}
+div.search_form-type {
+  width: px2rem(78); 
+  padding: px2rem(4) px2rem(8);
+  .selectize-input {
+    font-size: px2rem(16);
+    background-color: $dark-gray;
+    color: $medium-dark-gray;
+    box-shadow: none;
+    border-radius: 5px 0 0 5px;
+  }
+  .selectize-input::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f0dc";
+    margin-right: .4em;
+  }
+  .selectize-input::after {
+    border:none!important;
+  }
+}

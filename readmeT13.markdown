@@ -93,8 +93,8 @@ input[type="radio"]:checked + label i {
 
 ## Search Form
 
-With Frontend Frameworks like Bootstrap a Search Form is easy to style.
+With Frontend Frameworks like Bootstrap a Search Form is easy to style. We will use *selectize.js*.
 
 
 t13 
-v42
+v45
