@@ -229,21 +229,30 @@ div.contact_form-interest .selectize-input {
     .testimony-attribution > a:hover, .testimony-attribution > a:visited, .testimony-attribution > a:link, .testimony-attribution > a:active {
       color: #515151; }
 
-div.search_form-type {
-  width: 4.875rem;
-  padding: 0.25rem 0.5rem; }
-  div.search_form-type .selectize-input {
+.search_form-phrase {
+  vertical-align: top;
+  height: 1.875rem; }
+.search_form-submit {
+  vertical-align: top;
+  height: 1.875rem; }
+
+div.search_form-type.single {
+  display: inline-block;
+  height: 1.875rem;
+  vertical-align: top;
+  width: 4.875rem; }
+  div.search_form-type.single .selectize-input {
     font-size: 1rem;
     background-color: #515151;
     color: #aeaeae;
     box-shadow: none;
     border-radius: 5px 0 0 5px; }
-  div.search_form-type .selectize-input::before {
+  div.search_form-type.single .selectize-input::after {
+    border: none; }
+  div.search_form-type.single .selectize-input::before {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     content: "\f0dc";
     margin-right: .4em; }
-  div.search_form-type .selectize-input::after {
-    border: none !important; }
 
 /*# sourceMappingURL=styles.css.map */
