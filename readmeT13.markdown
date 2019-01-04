@@ -93,8 +93,22 @@ input[type="radio"]:checked + label i {
 
 ## Search Form
 
-With Frontend Frameworks like Bootstrap a Search Form is easy to style. We will use *selectize.js*.
+- With Frontend Frameworks like Bootstrap a Search Form is easy to style. 
+- We will use *selectize.js*.
+- Usually we will use some of the following:
+
+```
+vertical-align: top;
+display: inline-block; 
+font-size: 0;
+float: right;
+box-sizing: border-box;
+
+```
+
+If we want an icon on the submit button we will need to use <button>
 
 
-t13 
-v45
+### Fontastic
+
+If you really need an custom icon for the search box just use one from fontastic. [T13 - V57](https://buildamodule.com/collection/front-end-development#viewing)

@@ -25,20 +25,20 @@ $(function() {
 
 <body>
 
-  <form action="#" method="post" class="search_form">
-    <select name="search_type" class="search_form-type">
-      <option value="site">Site</option>
-      <option value="suppor">Help</option>
-      <option value="staff">Staff</option>
-    </select>
-
-    <input type="text" name="search_phrase" class="search_form-phrase">
-    <input type="submit" title="Submit search" class="search_form-submit">
-  </form>
 
 <header class="site_header">
     <div class="site_header-top">
         <a class="site_header-account_link" href="#">Account</a>
+        <form action="#" method="post" class="search_form">
+          <select name="search_type" class="search_form-type">
+            <option value="site">Site</option>
+            <option value="suppor">Help</option>
+            <option value="staff">Staff</option>
+          </select>
+
+          <input type="text" name="search_phrase" class="search_form-phrase">
+          <button type="submit" title="Submit search" class="search_form-submit" value=""></button>
+        </form>
     </div>
     <div class="site_header-bottom">
         <nav class="site_header-nav">
