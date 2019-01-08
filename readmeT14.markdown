@@ -86,8 +86,3 @@ compass watch
 
  - We add the `require` to the config.rb file
  - We add the `import` to the styles sass file
-
-
-
-T14
-v36
