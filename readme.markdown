@@ -1112,7 +1112,7 @@ Ver `09-Bundler/Gemfile`
 [Bundler](www.bundler.io) es similar a Bower. 
  
 Para instalarlo hacemos `gem install bundler`.
-También vamos a necesitar el entorno de desarrollod de ruby: `sudo apt-get install ruby-dev`
+También vamos a necesitar el entorno de desarrollod de ruby: `sudo apt-get install ruby-dev ruby-full`
 
 En nuestro proyecto tendremos un fichero llamado `Gemfile` que nos mantiene las versiones de nuestro software 
 
