@@ -1,0 +1,24 @@
+{
+  "name": "bower",
+  "description": "bower-json-file",
+  "main": "bower",
+  "authors": [
+    "pierre"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "bower"
+  ],
+  "homepage": "https://github.com/pierregermain/MyFront",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "selectize": "^0.12.6"
+  }
+}

@@ -1,0 +1,27 @@
+.testimony {
+  > p {
+    font-size: px2rem(14);
+    line-height: 170%;
+  }
+  &-title {
+    font-size: px2rem(24);
+    font-weight: $default-font-weight;
+    margin-bottom: .7em;
+  }
+  &-attribution {
+    font-style: italic;
+    > a {
+      color: $dark-gray;
+      &:hover, &:visited, &:link, &:active {
+        color: $dark-gray;
+      }
+    }
+  }
+  &-author_thumb {
+   height: px2rem(80); 
+   width: px2rem(80); 
+   border-radius: px2rem(40);
+   border: 3px solid white;
+   box-shadow: 0 0 3px rgba(0,0,0, .7); 
+  }
+} 

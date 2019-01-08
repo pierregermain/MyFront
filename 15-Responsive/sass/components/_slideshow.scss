@@ -1,0 +1,32 @@
+// We use 1000w until 800px
+.slideshow {
+  width: 100%;
+  height: px2rem(630);
+  background-image: url('../images/slideshow-1000.jpg');
+  background-size: cover;
+  background-position: bottom;
+  @include breakpoint(801px) {
+    background-image: url('../images/slideshow-bg-2000.jpg');
+  }
+  @include breakpoint(1501px) {
+    background-image: url('../images/slideshow-bg-3000.jpg');
+  }
+  @include breakpoint(2501px) {
+    background-image: url('../images/slideshow-bg.jpg');
+  }
+  &-slide {
+    padding: 3px;
+    & > p {
+      color: $white;
+      font-weight: $default-font-weight;
+      font-size: px2rem(20);
+    }
+  }
+  &-slide_title {
+    font-size: px2rem(39);
+    font-weight: 500;
+    color: $white;
+    line-height: 150%;
+    margin-bottom: 0.5em;
+  }
+}
