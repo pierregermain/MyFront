@@ -215,6 +215,22 @@ div.contact_form-interest .selectize-input {
     font-weight: 100;
     font-size: 1.25rem; }
 
+.slideshow {
+  width: 100%;
+  height: 39.375rem;
+  background-image: url("../images/slideshow-1000.jpg");
+  background-size: cover;
+  background-position: bottom; }
+
+@media (min-width: 801px) {
+  .slideshow {
+    background-image: url("../images/slideshow-bg-2000.jpg"); } }
+@media (min-width: 1501px) {
+  .slideshow {
+    background-image: url("../images/slideshow-bg-3000.jpg"); } }
+@media (min-width: 2501px) {
+  .slideshow {
+    background-image: url("../images/slideshow-bg-3000.jpg"); } }
 .testimony > p {
   font-size: 0.875rem;
   line-height: 170%; }

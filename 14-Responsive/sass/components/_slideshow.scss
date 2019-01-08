@@ -1,0 +1,26 @@
+// We use 1000w until 800px
+.slideshow {
+  width: 100%;
+  height: px2rem(630);
+  background-image: url('../images/slideshow-1000.jpg');
+  background-size: cover;
+  background-position: bottom;
+}
+// We use 2000w from 801px to 1500px width
+@media (min-width: 801px) {
+  .slideshow {
+    background-image: url('../images/slideshow-bg-2000.jpg');
+  }
+}
+// We use 3000w from 1501px to 2500px width
+@media (min-width: 1501px) {
+  .slideshow {
+    background-image: url('../images/slideshow-bg-3000.jpg');
+  }
+}
+// We use the biggest image from 2501px width
+@media (min-width: 2501px) {
+  .slideshow {
+    background-image: url('../images/slideshow-bg-3000.jpg');
+  }
+}
