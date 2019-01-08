@@ -17,4 +17,11 @@
       }
     }
   }
-}
+  &-author_thumb {
+   height: px2rem(80); 
+   width: px2rem(80); 
+   border-radius: px2rem(40);
+   border: 2px solid white;
+   box-shadow: 0 0 3px rgba(0,0,0, .7); 
+  }
+} 

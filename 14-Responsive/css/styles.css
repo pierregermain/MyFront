@@ -356,26 +356,6 @@ div.search_form-type.single .selectize-input::before {
   margin-right: .35em;
 }
 
-/* line 1, ../sass/components/_slide.scss */
-.slide {
-  background-color: #515151;
-  padding: 3px;
-}
-/* line 4, ../sass/components/_slide.scss */
-.slide > .slide-title {
-  font-size: 2.4375rem;
-  font-weight: 500;
-  color: white;
-  line-height: 150%;
-  margin-bottom: 0.5em;
-}
-/* line 11, ../sass/components/_slide.scss */
-.slide > p {
-  color: white;
-  font-weight: 100;
-  font-size: 1.25rem;
-}
-
 /* line 2, ../sass/components/_slideshow.scss */
 .slideshow {
   width: 100%;
@@ -384,25 +364,43 @@ div.search_form-type.single .selectize-input::before {
   background-size: cover;
   background-position: bottom;
 }
-
 @media (min-width: 801px) {
-  /* line 11, ../sass/components/_slideshow.scss */
+  /* line 2, ../sass/components/_slideshow.scss */
   .slideshow {
     background-image: url("../images/slideshow-bg-2000.jpg");
   }
 }
 @media (min-width: 1501px) {
-  /* line 17, ../sass/components/_slideshow.scss */
+  /* line 2, ../sass/components/_slideshow.scss */
   .slideshow {
     background-image: url("../images/slideshow-bg-3000.jpg");
   }
 }
 @media (min-width: 2501px) {
-  /* line 23, ../sass/components/_slideshow.scss */
+  /* line 2, ../sass/components/_slideshow.scss */
   .slideshow {
-    background-image: url("../images/slideshow-bg-3000.jpg");
+    background-image: url("../images/slideshow-bg.jpg");
   }
 }
+/* line 17, ../sass/components/_slideshow.scss */
+.slideshow-slide {
+  padding: 3px;
+}
+/* line 19, ../sass/components/_slideshow.scss */
+.slideshow-slide > p {
+  color: white;
+  font-weight: 100;
+  font-size: 1.25rem;
+}
+/* line 25, ../sass/components/_slideshow.scss */
+.slideshow-slide_title {
+  font-size: 2.4375rem;
+  font-weight: 500;
+  color: white;
+  line-height: 150%;
+  margin-bottom: 0.5em;
+}
+
 /* line 2, ../sass/components/_testimony.scss */
 .testimony > p {
   font-size: 0.875rem;
@@ -425,4 +423,12 @@ div.search_form-type.single .selectize-input::before {
 /* line 15, ../sass/components/_testimony.scss */
 .testimony-attribution > a:hover, .testimony-attribution > a:visited, .testimony-attribution > a:link, .testimony-attribution > a:active {
   color: #515151;
+}
+/* line 20, ../sass/components/_testimony.scss */
+.testimony-author_thumb {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 2.5rem;
+  border: 2px solid white;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
 }

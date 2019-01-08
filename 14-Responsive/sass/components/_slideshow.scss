@@ -5,22 +5,28 @@
   background-image: url('../images/slideshow-1000.jpg');
   background-size: cover;
   background-position: bottom;
-}
-// We use 2000w from 801px to 1500px width
-@media (min-width: 801px) {
-  .slideshow {
+  @include breakpoint(801px) {
     background-image: url('../images/slideshow-bg-2000.jpg');
   }
-}
-// We use 3000w from 1501px to 2500px width
-@media (min-width: 1501px) {
-  .slideshow {
+  @include breakpoint(1501px) {
     background-image: url('../images/slideshow-bg-3000.jpg');
   }
-}
-// We use the biggest image from 2501px width
-@media (min-width: 2501px) {
-  .slideshow {
-    background-image: url('../images/slideshow-bg-3000.jpg');
+  @include breakpoint(2501px) {
+    background-image: url('../images/slideshow-bg.jpg');
+  }
+  &-slide {
+    padding: 3px;
+    & > p {
+      color: $white;
+      font-weight: $default-font-weight;
+      font-size: px2rem(20);
+    }
+  }
+  &-slide_title {
+    font-size: px2rem(39);
+    font-weight: 500;
+    color: $white;
+    line-height: 150%;
+    margin-bottom: 0.5em;
   }
 }
