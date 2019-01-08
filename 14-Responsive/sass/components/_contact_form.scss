@@ -1,0 +1,78 @@
+%contact_form---gray_input_input {
+    font-size: px2rem(18);
+    letter-spacing: .1rem;
+}
+%contact_form---gray_input_box {
+    background-color: $light-gray;
+    border: $medium-gray 1px solid;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: block;
+    margin: 1em 0;
+    padding: 15px 28px;
+    width: 100%;
+}
+.contact_form {
+
+  margin-right: auto;
+  margin-left: auto;
+
+  width: px2rem(472);
+
+  &-type_label {
+    font-size: px2rem(20);
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: .1em;
+  }
+
+  &-type {
+    text-align: center;
+    i {
+      color: $light-gray;
+      margin-right: .1em;
+
+    }
+    label {
+      font-size: px2rem(18);
+      letter-spacing: .1em;
+      margin: 0 px2rem(14);
+    }
+    input[type="radio"] {
+      display: none;
+    }
+    input[type="radio"]:checked + label i {
+      &:before {
+        color: $blue;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f058";
+      }
+    }
+  }
+
+  &-name, &-email {
+    @extend %contact_form---gray_input_input;
+    @extend %contact_form---gray_input_box;
+  }
+
+  &-comment {
+    @extend %contact_form---gray_input_input;
+    @extend %contact_form---gray_input_box;
+    height: px2rem(150);
+  }
+  &-submit {
+    width: 100%;
+  }
+}
+
+div.contact_form-interest {
+  .selectize-input {
+    @extend %contact_form---gray_input_box;
+    box-shadow: none;
+
+    input {
+      @extend %contact_form---gray_input_input;
+    }
+  }
+}

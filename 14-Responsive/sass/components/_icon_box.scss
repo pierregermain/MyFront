@@ -1,0 +1,47 @@
+.icon_box {
+  background-color: #e8e8e8;
+  > p { // TODO: Unify paragraph styles
+    font-size: px2rem(14);
+    line-height: 150%;
+    padding: 8px;
+  }
+  &-title {
+    font-size: px2rem(26);
+    font-weight: $default-font-weight;
+    color: $dark-gray;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+  &-icon {
+    font-family: FontAwesome;
+    display:inline-block;
+    padding: px2rem(30);
+    background-color: purple;
+    border-radius: 4em;
+    color: white;
+    font-size: px2rem(40);
+    text-align: center;
+    width: px2rem(50);
+  }
+  &--passion {
+    .icon_box-icon {
+      background-color: $purple;
+    }
+  }
+  &--speed {
+    .icon_box-icon {
+      background-color: $blue;
+    }
+  }
+  &--creativity {
+    .icon_box-icon {
+      background-color: $green;
+    }
+  }
+  &--magic {
+    .icon_box-icon {
+      background-color: $orange;
+    }
+  }
+}
