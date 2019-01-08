@@ -62,12 +62,32 @@ Ex.) tell to use 100% width in mobile and 300px width on desktop
 
 In Css you can not use mediaqueries inside of classes, but in Sass you can using the *breakpoint-sass* extension
 
-We use *Bundler* to install this extension
+We use *Bundler* to install this extension using our Gemfile
 But we use *Compass* to use this extension
 
 # Compass
 
+We could install (in our project) compass with bundler using our Gemfile.
+We can also install compass globally using `sudo gem install compass`
+
+We use the *config.rb* file for our project
+
+We can generate one using `compass create fed`
+
+Once created copy the config.rb file to your root directory and remove the other files that have been generated.
+
+We could enable sass globbing adding the dependency to our *config.rb*
+
+```
+compass watch
+```
+
+## Adding sass-globbing to compass
+
+ - We add the `require` to the config.rb file
+ - We add the `import` to the styles sass file
+
 
 
 T14
-v30
+v33
