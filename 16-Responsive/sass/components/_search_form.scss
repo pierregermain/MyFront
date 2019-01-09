@@ -1,0 +1,57 @@
+$search_form-height: px2rem(30);
+$search_form-font_size: px2rem(16);
+
+.search_form {
+  font-size: 0;
+
+  &-phrase {
+    border-left: none;
+    border: 1px solid $medium-gray;
+    box-sizing: border-box;
+    padding-left: px2rem(10);
+    padding-right: px2rem(10);
+    font-size: $search_form-font_size;
+    height: $search_form-height;
+    vertical-align: top;
+    width: px2rem(200);
+  }
+  &-submit {
+    background-color: $light-gray;
+    border-left: none;
+    border-radius: 0 5px 5px 0 0;
+    border: 1px solid $medium-gray;
+    font-size: $search_form-font_size;
+    height: $search_form-height;
+    vertical-align: top;
+    &:before {
+      color: $medium-dark-gray;
+      content: "\f002";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 600;
+      margin-right: .4em;
+  }
+  }
+}
+div.search_form-type.single {
+  display: inline-block;
+  vertical-align: top;
+  width: px2rem(78); 
+  .selectize-input {
+    background-color: $light-gray;
+    border: 1px solid $medium-gray;
+    border-radius: 5px 0 0 5px;
+    box-shadow: none;
+    color: $medium-dark-gray;
+    font-size: $search_form-font_size;
+    height: $search_form-height;
+  }
+  .selectize-input::after {
+    border: none;
+  }
+  .selectize-input::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f0dc";
+    margin-right: .4em;
+  }
+}

@@ -1,0 +1,21 @@
+.section_hero {
+  overflow: auto;
+}
+.section_hero-title {
+  font-size: px2rem(34);
+  font-weight: normal;
+  color: #7A7A7A;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: .1em;
+  border-bottom: solid 1px $medium-gray;
+  padding-bottom: .8em;
+  margin-bottom: .9em;
+}
+.section_hero--alt {
+  background-color: $light-gray;
+  padding: 26px 121px;
+  > .section_hero-title {
+    border-bottom-color: $light-gray;
+  }
+}
