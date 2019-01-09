@@ -9,21 +9,54 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
 
-<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
-<script type="text/javascript" src="bower_components/sifter/sifter.js"></script>
-<script type="text/javascript" src="bower_components/microplugin/src/microplugin.js"></script>
-<script type="text/javascript" src="bower_components/selectize/dist/js/selectize.js"></script>
-<link rel="stylesheet" type="text/css" href="bower_components/selectize/dist/css/selectize.css" />
-<script>
+<!--Selectize-->
+<!--script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script-->
+<!--script type="text/javascript" src="bower_components/selectize/dist/js/selectize.js"></script-->
+<!--link rel="stylesheet" type="text/css" href="bower_components/selectize/dist/css/selectize.css" /-->
+<!--script type="text/javascript" src="bower_components/sifter/sifter.js"></script-->
+<!--script type="text/javascript" src="bower_components/microplugin/src/microplugin.js"></script-->
 
-$(function() {
-	$('select').selectize();
+<!--Flexslider-->
+<link rel="stylesheet" href="bower_compnents/flexslider/flexslider.css" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="bower_components/flexslider/jquery.flexslider.js"></script>
+
+
+<script>
+// Selectize
+//$(function() {
+//	$('select').selectize();
+//});
+
+  $(window).load(function() {
+    $('.flexslider').flexslider();
 });
+
+
 </script>
+
+<!-- Flexslider -->
+<link rel="stylesheet" href="node_modules/flexslider/flexslider.css" type="text/css">
+<script src="node_modules/flexslider/jquery.flexslider.js"></script>
 
 </head>
 
 <body>
+
+<div class="flexslider">
+  <ul class="slides">
+    <li>
+      <img src="slide1.jpg" />
+    </li>
+    <li>
+      <img src="slide2.jpg" />
+    </li>
+    <li>
+      <img src="slide3.jpg" />
+    </li>
+  </ul>
+</div>
+
 
 
 <header class="site_header">
