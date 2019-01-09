@@ -236,6 +236,11 @@ div.search_form-type.single .selectize-input::before {
 }
 
 /* line 1, ../sass/components/_section_hero-title.scss */
+.section_hero {
+  overflow: auto;
+}
+
+/* line 4, ../sass/components/_section_hero-title.scss */
 .section_hero-title {
   font-size: 2.125rem;
   font-weight: normal;
@@ -248,12 +253,12 @@ div.search_form-type.single .selectize-input::before {
   margin-bottom: .9em;
 }
 
-/* line 12, ../sass/components/_section_hero-title.scss */
+/* line 15, ../sass/components/_section_hero-title.scss */
 .section_hero--alt {
   background-color: #e8e8e8;
-  padding: 1.625rem 7.5625rem;
+  padding: 26px 121px;
 }
-/* line 15, ../sass/components/_section_hero-title.scss */
+/* line 18, ../sass/components/_section_hero-title.scss */
 .section_hero--alt > .section_hero-title {
   border-bottom-color: #e8e8e8;
 }
@@ -356,7 +361,7 @@ div.search_form-type.single .selectize-input::before {
   margin-right: .35em;
 }
 
-/* line 2, ../sass/components/_slideshow.scss */
+/* line 1, ../sass/components/_slideshow.scss */
 .slideshow {
   width: 100%;
   position: relative;
@@ -366,34 +371,34 @@ div.search_form-type.single .selectize-input::before {
   background-position: bottom;
 }
 @media (min-width: 801px) {
-  /* line 2, ../sass/components/_slideshow.scss */
+  /* line 1, ../sass/components/_slideshow.scss */
   .slideshow {
     background-image: url("../images/slideshow-bg-2000.jpg");
   }
 }
 @media (min-width: 1501px) {
-  /* line 2, ../sass/components/_slideshow.scss */
+  /* line 1, ../sass/components/_slideshow.scss */
   .slideshow {
     background-image: url("../images/slideshow-bg-3000.jpg");
   }
 }
 @media (min-width: 2501px) {
-  /* line 2, ../sass/components/_slideshow.scss */
+  /* line 1, ../sass/components/_slideshow.scss */
   .slideshow {
     background-image: url("../images/slideshow-bg.jpg");
   }
 }
-/* line 18, ../sass/components/_slideshow.scss */
+/* line 21, ../sass/components/_slideshow.scss */
 .slideshow-slide {
   padding: 3px;
 }
-/* line 20, ../sass/components/_slideshow.scss */
+/* line 23, ../sass/components/_slideshow.scss */
 .slideshow-slide > p {
   color: white;
   font-weight: 100;
   font-size: 1.25rem;
 }
-/* line 26, ../sass/components/_slideshow.scss */
+/* line 29, ../sass/components/_slideshow.scss */
 .slideshow-slide_title {
   font-size: 2.4375rem;
   font-weight: 500;
@@ -401,35 +406,101 @@ div.search_form-type.single .selectize-input::before {
   line-height: 150%;
   margin-bottom: 0.5em;
 }
+/* line 37, ../sass/components/_slideshow.scss */
+.slideshow > .slides {
+  height: 39.375rem;
+  padding-left: 200px;
+  width: 31.25rem;
+}
+/* line 41, ../sass/components/_slideshow.scss */
+.slideshow > .slides > li {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* line 49, ../sass/components/_slideshow.scss */
+.slideshow .flex-direction-nav a {
+  height: 21.3125rem;
+  width: 12.5rem;
+  top: 30%;
+}
+/* line 55, ../sass/components/_slideshow.scss */
+.slideshow .flex-direction-nav a:before {
+  font-size: 19.4375rem;
+  color: white;
+  text-shadow: 0.125rem 0.0625rem 0.1875rem rgba(0, 0, 0, 0.4);
+}
+/* line 66, ../sass/components/_slideshow.scss */
+.slideshow .flex-direction-nav a.flex-prev:before {
+  margin-left: -7.8125rem;
+}
+/* line 71, ../sass/components/_slideshow.scss */
+.slideshow .flex-control-nav {
+  bottom: 0.9375rem;
+}
+/* line 75, ../sass/components/_slideshow.scss */
+.slideshow .flex-control-nav li {
+  margin: 0 0.25rem;
+}
+/* line 79, ../sass/components/_slideshow.scss */
+.slideshow .flex-control-paging li a {
+  background-color: white;
+}
+/* line 83, ../sass/components/_slideshow.scss */
+.slideshow .flex-control-paging li a.flex-active {
+  background-color: rgba(255, 255, 255, 0.5);
+}
 
-/* line 2, ../sass/components/_testimony.scss */
-.testimony > p {
+/* line 1, ../sass/components/_testimony.scss */
+.testimony {
+  overflow: auto;
+  display: inline-block;
+  margin: 0 10px;
+  vertical-align: top;
+}
+/* line 7, ../sass/components/_testimony.scss */
+.testimony-content {
+  width: 372px;
+  margin-left: 20px;
+  float: left;
+}
+/* line 11, ../sass/components/_testimony.scss */
+.testimony-content > p {
   font-size: 0.875rem;
   line-height: 170%;
 }
-/* line 6, ../sass/components/_testimony.scss */
+/* line 17, ../sass/components/_testimony.scss */
 .testimony-title {
   font-size: 1.5rem;
   font-weight: 100;
   margin-bottom: .7em;
+  margin-top: 0;
 }
-/* line 11, ../sass/components/_testimony.scss */
+/* line 24, ../sass/components/_testimony.scss */
 .testimony-attribution {
   font-style: italic;
 }
-/* line 13, ../sass/components/_testimony.scss */
+/* line 26, ../sass/components/_testimony.scss */
 .testimony-attribution > a {
   color: #515151;
 }
-/* line 15, ../sass/components/_testimony.scss */
+/* line 28, ../sass/components/_testimony.scss */
 .testimony-attribution > a:hover, .testimony-attribution > a:visited, .testimony-attribution > a:link, .testimony-attribution > a:active {
   color: #515151;
 }
-/* line 20, ../sass/components/_testimony.scss */
+/* line 33, ../sass/components/_testimony.scss */
 .testimony-author_thumb {
   height: 5rem;
   width: 5rem;
   border-radius: 2.5rem;
   border: 3px solid white;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+  float: left;
+  margin-top: 37px;
+}
+
+/* line 1, ../sass/components/_testimony_slideshow.scss */
+.testimony_slideshow {
+  background: none;
+  border: 0;
 }

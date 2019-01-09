@@ -1,3 +1,6 @@
+.section_hero {
+  overflow: auto;
+}
 .section_hero-title {
   font-size: px2rem(34);
   font-weight: normal;
@@ -11,7 +14,7 @@
 }
 .section_hero--alt {
   background-color: $light-gray;
-  padding: px2rem(26) px2rem(121);
+  padding: 26px 121px;
   > .section_hero-title {
     border-bottom-color: $light-gray;
   }

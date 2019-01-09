@@ -1,13 +1,26 @@
 .testimony {
-  > p {
-    font-size: px2rem(14);
-    line-height: 170%;
+  overflow: auto;
+  display: inline-block;
+  margin: 0 10px;
+  vertical-align: top;
+
+  &-content {
+    width: 372px;
+    margin-left: 20px;
+    float:left;
+    > p {
+      font-size: px2rem(14);
+      line-height: 170%;
+    }
   }
+
   &-title {
     font-size: px2rem(24);
     font-weight: $default-font-weight;
     margin-bottom: .7em;
+    margin-top: 0;
   }
+
   &-attribution {
     font-style: italic;
     > a {
@@ -23,5 +36,7 @@
    border-radius: px2rem(40);
    border: 3px solid white;
    box-shadow: 0 0 3px rgba(0,0,0, .7); 
+   float: left;
+   margin-top: 37px;
   }
 } 

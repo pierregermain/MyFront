@@ -1,0 +1,24 @@
+.testimony_slideshow {
+  background: none;
+  border: 0;
+  .flex-direction-nav a:before {
+    //Add Fontawesome Font
+  }
+
+  .flex-direction-nav a.flex-next:before {
+    // Add Fontawesome Font and custom styles
+    // Add right property
+  }
+
+  .flex-direction-nav a.flex-prev:before {
+    // Add Fontawesome Font and custom styles
+    // Add left property
+  }
+  &:hover .flex-direction-nav a.flex-prev {
+    // Add left property
+  }
+  &:hover .flex-direction-nav a.flex-next {
+    // Add right property
+  }
+
+}

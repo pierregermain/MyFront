@@ -29,9 +29,17 @@
 //});
 
   $(window).load(function() {
-    $('.slideshow').flexslider();
-});
+    $('.slideshow').flexslider(); 
+  });
 
+  $(window).load(function() {
+    $('.testimony_slideshow').flexslider({
+    animation:"slide",
+    animationLoop: false,
+    itemWidth: 500,
+    itemMargin: 5}
+    );
+});
 
 </script>
 
@@ -100,7 +108,7 @@
     <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet tincidunt elit. Proin interdum quam elit Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 </section>
 
-<div class="slideshow">
+<div class="slideshow flexslider">
   <ul class="slides">
     <li>
   <section class="slideshow-slide">
@@ -130,21 +138,57 @@
     <h2 class="section_hero-title">Written By Our Team</h2>
 </section>
 
-<section class="testimony">
-  <div class="testimony-author_thumb" title="Jeff Photo" style="background-image:url('images/author-1.jpg');"></div>
-    <h3 class="testimony-title">The top 10 things you need to know</h3>
-    <p class="testimony-attribution"> By <a href="#">Jeff Mills</a>> on January 14, 2018</p>
-    <p>Chewie! Get behind me! Get behind me! Can't get out that way. Looks like you managed to cut off our only escape route. Maybe you'd like it back in your cell, Your Highness. See-Threepio! See-Threepio! Yes sir? We've been cut off! Are there any other ways out of the cell bay?</p>
-    <a href="#" class="button">Read On</a>
-</section>
+<div class="testimony_slideshow flexslider">
+  <ul class="slides">
+    <li>
+      <section class="testimony">
+        <div class="testimony-author_thumb" title="Jeff Photo" style="background-image:url('images/author-1.jpg');"></div>
+        <div class="testimony-content">
+          <h3 class="testimony-title">The top 10 things you need to know</h3>
+          <p class="testimony-attribution"> By <a href="#">Jeff Mills</a>> on January 14, 2018</p>
+          <p>Chewie! Get behind me! Get behind me! Can't get out that way. Looks like you managed to cut off our only escape route. Maybe you'd like it back in your cell, Your Highness. See-Threepio! See-Threepio! Yes sir? We've been cut off! Are there any other ways out of the cell bay?</p>
+          <a href="#" class="button">Read On</a>
+        </div>
+      </section>
+    </li>
+    <li>
+      <section class="testimony">
+        <div class="testimony-author_thumb" title="Jeff Photo" style="background-image:url('images/author-1.jpg');"></div>
+        <div class="testimony-content">
+          <h3 class="testimony-title">The top 10 things you need to know</h3>
+          <p class="testimony-attribution"> By <a href="#">Jeff Mills</a>> on January 14, 2018</p>
+          <p>Chewie! Get behind me! Get behind me! Can't get out that way. Looks like you managed to cut off our only escape route. Maybe you'd like it back in your cell, Your Highness. See-Threepio! See-Threepio! Yes sir? We've been cut off! Are there any other ways out of the cell bay?</p>
+          <a href="#" class="button">Read On</a>
+        </div>
+      </section>
+    </li>
+    
+    <li>
+      <section class="testimony">
+        <div class="testimony-author_thumb" title="Jeff Photo" style="background-image:url('images/author-1.jpg');"></div>
+        <div class="testimony-content">
+          <h3 class="testimony-title">The top 10 things you need to know</h3>
+          <p class="testimony-attribution"> By <a href="#">Jeff Mills</a>> on January 14, 2018</p>
+          <p>Chewie! Get behind me! Get behind me! Can't get out that way. Looks like you managed to cut off our only escape route. Maybe you'd like it back in your cell, Your Highness. See-Threepio! See-Threepio! Yes sir? We've been cut off! Are there any other ways out of the cell bay?</p>
+          <a href="#" class="button">Read On</a>
+        </div>
+      </section>
+    </li>
 
-<section class="testimony">
-  <div class="testimony-author_thumb" title="Jeff Photo" style="background-image:url('images/author-1.jpg');"></div>
-    <h3 class="testimony-title">The top 10 things you need to know</h3>
-    <p class="testimony-attribution"> By <a href="#">Jeff Mills</a>> on January 14, 2018</p>
-    <p>Chewie! Get behind me! Get behind me! Can't get out that way. Looks like you managed to cut off our only escape route. Maybe you'd like it back in your cell, Your Highness. See-Threepio! See-Threepio! Yes sir? We've been cut off! Are there any other ways out of the cell bay?</p>
-    <a href="#" class="button">Read On</a>
-</section>
+
+    <li>
+      <section class="testimony">
+        <div class="testimony-author_thumb" title="Jeff Photo" style="background-image:url('images/author-1.jpg');"></div>
+        <div class="testimony-content">
+          <h3 class="testimony-title">The top 10 things you need to know</h3>
+          <p class="testimony-attribution"> By <a href="#">Jeff Mills</a>> on January 14, 2018</p>
+          <p>Chewie! Get behind me! Get behind me! Can't get out that way. Looks like you managed to cut off our only escape route. Maybe you'd like it back in your cell, Your Highness. See-Threepio! See-Threepio! Yes sir? We've been cut off! Are there any other ways out of the cell bay?</p>
+          <a href="#" class="button">Read On</a>
+        </div>
+      </section>
+    </li>
+  </ul>
+</div>
 
 
 <section class="section_hero">
