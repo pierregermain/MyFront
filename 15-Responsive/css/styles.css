@@ -359,6 +359,7 @@ div.search_form-type.single .selectize-input::before {
 /* line 2, ../sass/components/_slideshow.scss */
 .slideshow {
   width: 100%;
+  position: relative;
   height: 39.375rem;
   background-image: url("../images/slideshow-1000.jpg");
   background-size: cover;
@@ -382,17 +383,17 @@ div.search_form-type.single .selectize-input::before {
     background-image: url("../images/slideshow-bg.jpg");
   }
 }
-/* line 17, ../sass/components/_slideshow.scss */
+/* line 18, ../sass/components/_slideshow.scss */
 .slideshow-slide {
   padding: 3px;
 }
-/* line 19, ../sass/components/_slideshow.scss */
+/* line 20, ../sass/components/_slideshow.scss */
 .slideshow-slide > p {
   color: white;
   font-weight: 100;
   font-size: 1.25rem;
 }
-/* line 25, ../sass/components/_slideshow.scss */
+/* line 26, ../sass/components/_slideshow.scss */
 .slideshow-slide_title {
   font-size: 2.4375rem;
   font-weight: 500;
@@ -429,6 +430,6 @@ div.search_form-type.single .selectize-input::before {
   height: 5rem;
   width: 5rem;
   border-radius: 2.5rem;
-  border: 2px solid white;
+  border: 3px solid white;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
 }

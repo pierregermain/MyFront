@@ -1,6 +1,7 @@
 // We use 1000w until 800px
 .slideshow {
   width: 100%;
+  position: relative;
   height: px2rem(630);
   background-image: url('../images/slideshow-1000.jpg');
   background-size: cover;
