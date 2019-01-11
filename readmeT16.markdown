@@ -54,6 +54,26 @@ The last code would look like this:
 }
 ```
 
+## Fixed Width Section
+
+We add a new placeholder variable in the layout.scss file.
+All placeholder layout variables will begin with `l`.
+When less that 1000px width we will have a full width, after that a fixed one;
+
+```
+%l-full_width {
+  margin: 25px 20px;
+  width: auto;
+  @include breakpoint(1000px) { 
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+  }
+}
+```
+
+Now to use this placeholder just extend it where needed.
+
 ## Featured Boxes
 
 First we set the padding of all the container. We look if an other container has the same padding already set.
@@ -94,32 +114,169 @@ We will need a breakpoint so that our boxes layout good when in mobile (Less tha
 
 ```
 .icon_box-wrapper {
-  width: 612px;
   margin-left: auto;
   margin-right: auto;
+  max-width: 612px;
   @include breakpoint(1000px) {
     width: auto;
+    max-width: none;
   }
 }
 ```
 
-## Fixed Width Section
 
-We add a new placeholder variable in the layout.scss file.
-All placeholder layout variables will begin with `l`.
-When less that 1000px width we will have a full width, after that a fixed one;
+## Make Vertical Slider Responsive
+
+Create a breakpoint and change the width of the wrapper for mobile.
 
 ```
-%l-full_width {
-  margin: 25px 20px;
+.slideshow {
+  $break_big: 1070px;
+  $break_small: 670px;
+
   width: auto;
-  @include breakpoint(1000px) { 
+
+  @include breakpoint ($break_small) {
+    width: 515px; // single item width
+  }
+  
+  @include breakpoint ($break_big) {
+    width: 970px //max width 
+  }
+
+  .arrows {
+    display: none;
+     @include breakpoint ($break_small) {
+       right: -50px;
+       display: block;
+     }
+  }
+}
+
+```
+
+## Make Horizontal Slider Full Width
+
+```
+.slideshow {
+  width: auto;
+  box-sizing: border:box;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+}
+``` 
+
+## Marke Vertical Slider Full Width
+
+```
+.slideshow {
+  width: auto;
+  margin: 0;
+}
+```
+
+## Make Borders of Sections smaller
+
+We just need to adjust the width and add some margin =)
+
+
+```
+.section {
+  border: <adjust as needed>;
+  width: auto;
+  margin-left: 20px;
+  margin-right: 20px;
+  @include breakpoint ($max_width) {
+    width: $max_width;
     margin-left: auto;
-    margin-right: auto;
-    width: 960px;
+    margin-rgith: auto;
+    }
+}
+```
+
+## Make a Contact Form Reponsive
+
+```
+.contact_form{
+  $full_width: 530px;
+  width: auto;
+  @include breakpoint($full_width) {
+    width: px2rem(472);
   }
 }
 ```
+
+### Make an Input Responsive
+
+Just create an wrapper arround every input and set the following style.
+
+```
+.radio_wrapper {
+  display: inline-block;
+}
+```
+
+## Style Header for Desktop
+
+We have a header with the following elements:
+
+```
+LOGO                  ACCOUNT   SEARCH
+MENU                         TELEPHONE
+```
+
+```
+.site_header{
+  
+  &-top {
+    @extend %l-full_width;
+    overflow: auto;
+    padding: <adjust>;
+  }
+
+  &-bottom {
+    padding: <adjust>;
+    overflow: auto;
+  }
+  &-bottom_inner {
+    @extend %l-full_width;
+  }
+
+  &-top_right {
+    float: right;
+    padding-top: <adjust>;
+  }
+
+  &-logo {
+    float: left;
+  }
+
+  &-account_link { 
+    // only one line can be adjusted like this
+    display: inline-block;
+    line-height: px2rem(29);
+    margin-right: <adjust>;
+  }
+
+  &-nav {
+    float: left;
+  }
+
+  &-phone {
+    float: right;
+  }
+}
+```
+
+## Style Header for Mobile
+
+Usually the order of the Header Elements would be:
+
+ - Logo
+ - Account Block
+ - Navigation
+ - Phone Number (remove from header on mobile)
 
 T16
-V36
+V58
