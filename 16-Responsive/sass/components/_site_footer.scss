@@ -1,10 +1,23 @@
 .site_footer {
+  $one-column-breakpoint: 1010px;
+
   background-color: $dark-gray;
   color: $medium-dark-gray;
-  > p {
-    $margin: px2em (8);
-    margin-top: $margin;
-    margin-bottom: $margin;
+  padding: px2rem(33);
+
+  &-contact_info {
+    float:left;
+    margin-top: px2rem(-10);
+    @include breakpoint(max-width $one_column_breakpoint) {
+      float: none;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    > p {
+      $margin: px2em(8);
+      margin-top: $margin;
+      margin-bottom: $margin;
+    }
   }
   &-copyright {
     color: $white;
@@ -26,6 +39,11 @@
       }
     }
   }
+  &-nav_wrapper{
+    width: 27rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
   &-nav--alt{
     border-top: $medium-dark-gray solid 1px;
     padding-top: px2em(13);
@@ -36,6 +54,12 @@
     }
   }
   &-social_nav {
+    float:right;
+    @include breakpoint(max-width $one_column_breakpoint) {
+      float: none;
+      text-align: center;
+      margin-bottom: 20px;
+    }
     > a {
       display: inline-block;
       margin: 0 .1em 0 .1em;

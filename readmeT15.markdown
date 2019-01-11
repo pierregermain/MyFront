@@ -1,9 +1,12 @@
 # Styling Sliders
 
- - There are great libraries to help implement sliders:
-  - [Flexslider](https://woocommerce.com/flexslider/)
+Please Note that the source code should be taken from the T19.
+
+There are great libraries to help implement sliders: We will have a look at Flexslider.
 
 ## Flexslider
+
+[Flexslider](https://woocommerce.com/flexslider/)
 
 We add Flexslider with yarn to our project. We will have installed the needed files at
 
