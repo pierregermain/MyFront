@@ -74,7 +74,7 @@ After that we adjust the margins.
 
   display:inline-block;
   text-align: left;
-  margin;
+  margin: <adjust as needed>;
 
   width: px2rem($size);
   height: px2rem($psize);
@@ -90,9 +90,36 @@ After that we adjust the margins.
 }
 ```
 
+We will need a breakpoint so that our boxes layout good when in mobile (Less than 1000px). What we do is create a wrapper around our boxes:
 
+```
+.icon_box-wrapper {
+  width: 612px;
+  margin-left: auto;
+  margin-right: auto;
+  @include breakpoint(1000px) {
+    width: auto;
+  }
+}
+```
 
+## Fixed Width Section
 
+We add a new placeholder variable in the layout.scss file.
+All placeholder layout variables will begin with `l`.
+When less that 1000px width we will have a full width, after that a fixed one;
+
+```
+%l-full_width {
+  margin: 25px 20px;
+  width: auto;
+  @include breakpoint(1000px) { 
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+  }
+}
+```
 
 T16
-V31
+V36
