@@ -23,10 +23,30 @@ module.exports = function(grunt) {
         dest: 'css/all-css.css'
       }
     }
+
+    uglify: {
+      my_target: {
+        files: {
+          'js/all-js.min.js': ['js/all-js.js']
+        }
+      }
+    } ,
+
+    cssmin: {
+      target: {
+        files: {
+          'css/all-css-min.css': ['css/all-css.css']
+        }
+      }
+    },
   });
+
 
   // Load the plugin that provides the "concat" task.
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+
 
   // Default task(s).
   grunt.registerTask('default', ['concat']);

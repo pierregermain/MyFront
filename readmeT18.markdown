@@ -80,8 +80,25 @@ We would add to the Gruntfile every file needed.
 
 just run `grunt` from the cli.
 
+# Minify Files with Grunt 
 
+## Minify CSS using Grunt
+
+ - it removes comments and white spaces
+
+https://github.com/gruntjs/grunt-contrib-cssmin
+
+
+## Minify JS using Grunt
+
+https://github.com/gruntjs/grunt-contrib-uglify
+
+To install just
+
+```
+npm install grunt-contrib-uglify --save-dev
+```
 
 
 T18
-V33
+V40
