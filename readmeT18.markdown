@@ -69,9 +69,11 @@ This will add grunt to our package.json file (in devDependencies)
 
 https://github.com/gruntjs/grunt-contrib-concat
 
-## Using Grunt
+## Using and configuring Grunt
 
 We use the `Gruntfile.js` to configure our grunt process.
+
+We would add to the Gruntfile every file needed.
 
 
 ## Running our tasks
