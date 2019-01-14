@@ -3,6 +3,7 @@
     "@fortawesome/fontawesome-free": "^5.4.0",
     "grunt": "^1.0.3",
     "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^3.0.0",
     "grunt-contrib-uglify": "^4.0.0"
   },
   "dependencies": {

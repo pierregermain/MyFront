@@ -99,6 +99,11 @@ To install just
 npm install grunt-contrib-uglify --save-dev
 ```
 
+# Add Grunt Files to our Index.html automatically
+
+https://github.com/klei/grunt-injector
+
+We can use grunt-injector for that
 
 T18
-V40
+V44

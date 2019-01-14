@@ -22,7 +22,7 @@ module.exports = function(grunt) {
         ],
         dest: 'css/all-css.css'
       }
-    }
+    },
 
     uglify: {
       my_target: {
@@ -49,7 +49,7 @@ module.exports = function(grunt) {
 
 
   // Default task(s).
-  grunt.registerTask('default', ['concat']);
   //grunt.registerTask('default', ['concat:concatJS']);
+  grunt.registerTask('default', ['concat','uglify','cssmin']);
 
 };
