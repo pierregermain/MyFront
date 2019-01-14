@@ -318,6 +318,28 @@ We add the following styles (this will need to be modified to be mobile-first!)
 }
 
 ```
+The same styles for mobile first would be like the following:
+
+ ```
+ .site-header {
+   $mobile-break: 670px;
+   &-top_right {
+       width: <adjust>;
+       margin-left: auto;
+       margin-right: auto;
+       text-align: center;
+     @include_breakpoint($mobile-break) {
+       float:right;
+       width: auto;
+       margin: inherit;
+       text-align: inherit;
+     }
+   }
+}
+
+```
+
+If you see the code is beginning to be complicated, so it doesn't make so many sense to change the code to be mobile-first (at least in this project because the design was done for desktop)
 
 ## Add extra padding for mobile
 
@@ -328,16 +350,88 @@ Do it with rems!
 
 With the [viewport](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag) metatag you can adjust how your page will be viewed on mobile devices.
 
-### Viewport Example
+#### Viewport Example
 
 ```
 <meta name="viewport" content="width=device-width, user-scalable=no">
 ```
 
-## Show Mediaqueries
+## Show Mediaqueries in Chrome
 
 You can [show mediaqueries](https://www.youtube.com/watch?v=dPU5xGty0tE) in Chrome Dev Tools by checking "Show Mediaqueries" in the Device Toolbar.
 
 
+## Responsive Slider
+
+We add an brekpoint at 820px. We add the following styles.
+
+Note that the following is desktop-first (using max-width):
+```
+.slideshow {
+
+  $breakpoint: 820px;
+  
+  > .slides {
+    @include breakpoint(max-width $breakpoint) {  
+      width: auto;
+      padding: 0 20 px;
+    }
+  }
+
+  .arrows {
+    @include breakpoint(max-width $breakpoint) {  
+      display: none;
+    }
+    
+  }
+  
+}
+
+```
+
+## Final Touch
+
+Once all is styled have a look at all the blocks (Margins and Paddings) for every breakpoint and do the final touch!
+
+
+### Order of elements and z-index
+
+If you see something overlapping (for example a submenu) maybe you need to:
+ - change order of the element in the html
+ - maybe adjust some 3rd party JS
+ - adjust the *z-index*.
+
+Don't use z-index if not needed!!!
+
+If you use z-index you should use named layers from within Sass.
+
+## Box Shadow
+
+You can apply shadows with new div's that have box-shadow applied. You can add these kind of elements using the after pseudo element
+
+```
+.slider {
+  border-bottom: 1px solid $white;
+  .wrapper {
+    positon: relative;
+    &:after {
+      content: "";
+      position: relative;
+      box-shadow: 0 0 30px rgba(0,0,0, .6);
+      border-radius: 30%;
+      z-index: -2;
+      left: 5%;
+      right: 5%;
+      height: 50%;
+    }
+  }
+}
+```
+
+## Browser support
+
+Make your Web functional in one browser (for example Chrome) and then make adjustment for the other browsers (For example Edge and Firefox).
+
+
 T17
-V11
+V27
