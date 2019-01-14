@@ -22,6 +22,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
 
   // Default task(s).
-  grunt.registerTask('default', ['concat']);
+  grunt.registerTask('default', ['concat:concatCSS']);
+  //grunt.registerTask('default', ['concat']);
 
 };
