@@ -7,9 +7,13 @@ module.exports = function(grunt) {
       options: {
         separator: ';',
       },
-      dist: {
+      concatJS: {
         src: ['bower_components/jquery/dist/jquery.js','bower_components/microplugin/src/microplugin.js'],
         dest: 'dist/built.js'
+      },
+      concatCSS: {
+        src: ['bower_components/jquery/dist/jquery.js','bower_components/microplugin/src/microplugin.js'],
+        dest: 'dist/built.css'
       }
     }
   });
