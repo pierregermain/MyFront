@@ -8,7 +8,7 @@ module.exports = function(grunt) {
         separator: ';',
       },
       dist: {
-        src: ['bower_components/jquery/dist/jsquery.js','bower_component/microplugin/src/microplugin.js'],
+        src: ['bower_components/jquery/dist/jquery.js','bower_components/microplugin/src/microplugin.js'],
         dest: 'dist/built.js'
       }
     }

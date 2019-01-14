@@ -76,8 +76,10 @@ We use the `Gruntfile.js` to configure our grunt process.
 
 ## Running our tasks
 
+just run `grunt` from the cli.
+
 
 
 
 T18
-V30
+V33
