@@ -1,5 +1,15 @@
 module.exports = function(grunt) {
 
+  // Arrays
+  filesJS = [
+          'bower_components/jquery/dist/jquery.js',
+          'bower_components/microplugin/src/microplugin.js'
+  ];
+  filesCSS = [
+          'node_modules/normalize.css/normalize.css',
+          'node_modules/@fortawesome/fontawesome-free/css/all.min.css'
+  ];
+
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -9,17 +19,11 @@ module.exports = function(grunt) {
       },
       // Add all Files here
       concatJS: {
-        src: [
-          'bower_components/jquery/dist/jquery.js',
-          'bower_components/microplugin/src/microplugin.js'
-        ],
+        src: filesJS,
         dest: 'js/all-js.js'
       },
       concatCSS: {
-        src: [
-          'node_modules/normalize.css/normalize.css',
-          'node_modules/@fortawesome/fontawesome-free/css/all.min.css'
-        ],
+        src: filesCSS,
         dest: 'css/all-css.css'
       }
     },
@@ -39,6 +43,18 @@ module.exports = function(grunt) {
         }
       }
     },
+
+    injector: {
+      options: {},
+      dev: {
+        files: {
+          'index.html': [filesJS, filesCSS],
+        }
+      }
+    },
+
+
+
   });
 
 
@@ -46,10 +62,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-injector');
 
 
   // Default task(s).
   //grunt.registerTask('default', ['concat:concatJS']);
-  grunt.registerTask('default', ['concat','uglify','cssmin']);
+  grunt.registerTask('default', ['concat','uglify','cssmin','injector']);
 
 };

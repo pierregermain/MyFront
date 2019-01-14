@@ -103,7 +103,15 @@ npm install grunt-contrib-uglify --save-dev
 
 https://github.com/klei/grunt-injector
 
-We can use grunt-injector for that
+We can use grunt-injector for that.
+
+We add the corresponding comments to our index.html
+
+We will have 2 versions of the injector, one for dev, the other for prod
+
+
+
+
 
 T18
 V44
