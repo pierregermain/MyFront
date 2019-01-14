@@ -1,6 +1,6 @@
-# Responsive Layout
+# Responsive Layout (T16 and T17)
 
-Please Note that the source code should be taken from the T19.
+Please Note that the source code should be viewed in the T19 folder.
 
 It's nice if we can focus on *MOBILE-FIRST* sites so that our site is usuable for all decvices.
 
@@ -252,14 +252,14 @@ MENU                         TELEPHONE
     float: left;
   }
 
-  &-account_link { 
+  &-account { 
     // only one line can be adjusted like this
     display: inline-block;
     line-height: px2rem(29);
     margin-right: <adjust>;
   }
 
-  &-nav {
+  &-menu {
     float: left;
   }
 
@@ -277,6 +277,3 @@ Usually the order of the Header Elements would be:
  - Account Block
  - Navigation
  - Phone Number (remove from header on mobile)
-
-T16
-V58
