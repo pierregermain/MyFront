@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Basic HTML & CSS examples</title>
+    <link href="node_modules/normalize.css/normalize.css" rel="stylesheet" type="text/css"/>
+    <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+
+<!--Selectize-->
+<!--script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script-->
+<!--script type="text/javascript" src="bower_components/selectize/dist/js/selectize.js"></script-->
+<!--link rel="stylesheet" type="text/css" href="bower_components/selectize/dist/css/selectize.css" /-->
+<!--script type="text/javascript" src="bower_components/sifter/sifter.js"></script-->
+<!--script type="text/javascript" src="bower_components/microplugin/src/microplugin.js"></script-->
+
+<!--Flexslider-->
+<link rel="stylesheet" href="bower_components/flexslider/flexslider.css" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="bower_components/flexslider/jquery.flexslider.js"></script>
+
+
+<script>
+// Selectize
+//$(function() {
+//	$('select').selectize();
+//});
+
+  $(window).load(function() {
+    $('.slideshow').flexslider(); 
+  });
+
+  $(window).load(function() {
+    $('.testimony_slideshow').flexslider({
+    animation:"slide",
+    animationLoop: false,
+    itemWidth: 500,
+    itemMargin: 5}
+    );
+});
+
+</script>
+
+</head>
+
+<body>
+
+<header class="site_header">
+    <div class="site_header-top">
+      <img src="images/logo.png" alt="Company Logo" sizes="208px">
+        <a class="site_header-account_link" href="#">Account</a>
+        <form action="#" method="post" class="search_form">
+          <select name="search_type" class="search_form-type">
+            <option value="site">Site</option>
+            <option value="suppor">Help</option>
+            <option value="staff">Staff</option>
+          </select>
+
+          <input type="text" name="search_phrase" class="search_form-phrase">
+          <button type="submit" title="Submit search" class="search_form-submit" value=""></button>
+        </form>
+    </div>
+    <div class="site_header-bottom">
+        <nav class="site_header-nav">
+            <a class="is-active" href="#">Home</a>
+            <a href="#">Blog</a>
+            <a href="#">Pricing</a>
+            <a href="#">Team</a>
+        </nav>
+        <a href="#" class="button button--pill"><i class="fas fa-phone"></i> +34 677.299.299</a>
+    </div>
+</header>
+
+<section class="section_hero">
+    <h2 class="section_hero-title">Qualities</h2>
+</section>
+
+<section class="icon_box icon_box--passion">
+    <div class="icon_box-icon">
+        <i class="fas fa-heart"></i>
+    </div>
+    <h3 class="icon_box-title">Passion</h3>
+    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet tincidunt elit. Proin interdum quam elit Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</section>
+
+<section class="icon_box icon_box--speed">
+    <div class="icon_box-icon">
+        <i class="fas fa-bolt"></i>
+    </div>
+    <h3 class="icon_box-title">Speed</h3>
+    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet tincidunt elit. Proin interdum quam elit Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</section>
+
+<section class="icon_box icon_box--creativity">
+    <div class="icon_box-icon">
+        <i class="fas fa-flask"></i>
+    </div>
+    <h3 class="icon_box-title">Creativity</h3>
+    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet tincidunt elit. Proin interdum quam elit Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</section>
+<section class="icon_box icon_box--magic">
+    <div class="icon_box-icon">
+        <i class="fas fa-magic"></i>
+    </div>
+    <h3 class="icon_box-title">Magic</h3>
+    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet tincidunt elit. Proin interdum quam elit Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</section>
+
+<div class="slideshow flexslider">
+  <ul class="slides">
+    <li>
+  <section class="slideshow-slide">
+    <h2 class="slideshow-slide_title">More than just one company</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet tincidunt elit. Proin interdum quam elit, non dapibus magna convallis ac. Proin dictum eget lacus non sagittis. Etiam vulputate commodo felis, eu feugiat felis tempus ac. Cras eget volutpat sem. Nam vitae dolor et mauris interdum consectetur. In hac habitasse platea dictumst. </p>
+    <a href="#" class="button">Learn more</a>
+  </section>
+    </li>
+    <li>
+  <section class="slideshow-slide">
+    <h2 class="slideshow-slide_title">More than just two companies</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet tincidunt elit. Proin interdum quam elit, non dapibus magna convallis ac. Proin dictum eget lacus non sagittis. Etiam vulputate commodo felis, eu feugiat felis tempus ac. Cras eget volutpat sem. Nam vitae dolor et mauris interdum consectetur. In hac habitasse platea dictumst. </p>
+    <a href="#" class="button">Learn more</a>
+  </section>
+    </li>
+    <li>
+  <section class="slideshow-slide">
+    <h2 class="slideshow-slide_title">More than just three companies</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet tincidunt elit. Proin interdum quam elit, non dapibus magna convallis ac. Proin dictum eget lacus non sagittis. Etiam vulputate commodo felis, eu feugiat felis tempus ac. Cras eget volutpat sem. Nam vitae dolor et mauris interdum consectetur. In hac habitasse platea dictumst. </p>
+    <a href="#" class="button">Learn more</a>
+  </section>
+    </li>
+  </ul>
+</div>
+
+<section class="section_hero--alt">
+    <h2 class="section_hero-title">Written By Our Team</h2>
+</section>
+
+<div class="testimony_slideshow flexslider">
+  <ul class="slides">
+    <li>
+      <section class="testimony">
+        <div class="testimony-author_thumb" title="Jeff Photo" style="background-image:url('images/author-1.jpg');"></div>
+        <div class="testimony-content">
+          <h3 class="testimony-title">The top 10 things you need to know</h3>
+          <p class="testimony-attribution"> By <a href="#">Jeff Mills</a>> on January 14, 2018</p>
+          <p>Chewie! Get behind me! Get behind me! Can't get out that way. Looks like you managed to cut off our only escape route. Maybe you'd like it back in your cell, Your Highness. See-Threepio! See-Threepio! Yes sir? We've been cut off! Are there any other ways out of the cell bay?</p>
+          <a href="#" class="button">Read On</a>
+        </div>
+      </section>
+    </li>
+    <li>
+      <section class="testimony">
+        <div class="testimony-author_thumb" title="Jeff Photo" style="background-image:url('images/author-1.jpg');"></div>
+        <div class="testimony-content">
+          <h3 class="testimony-title">The top 10 things you need to know</h3>
+          <p class="testimony-attribution"> By <a href="#">Jeff Mills</a>> on January 14, 2018</p>
+          <p>Chewie! Get behind me! Get behind me! Can't get out that way. Looks like you managed to cut off our only escape route. Maybe you'd like it back in your cell, Your Highness. See-Threepio! See-Threepio! Yes sir? We've been cut off! Are there any other ways out of the cell bay?</p>
+          <a href="#" class="button">Read On</a>
+        </div>
+      </section>
+    </li>
+    
+    <li>
+      <section class="testimony">
+        <div class="testimony-author_thumb" title="Jeff Photo" style="background-image:url('images/author-1.jpg');"></div>
+        <div class="testimony-content">
+          <h3 class="testimony-title">The top 10 things you need to know</h3>
+          <p class="testimony-attribution"> By <a href="#">Jeff Mills</a>> on January 14, 2018</p>
+          <p>Chewie! Get behind me! Get behind me! Can't get out that way. Looks like you managed to cut off our only escape route. Maybe you'd like it back in your cell, Your Highness. See-Threepio! See-Threepio! Yes sir? We've been cut off! Are there any other ways out of the cell bay?</p>
+          <a href="#" class="button">Read On</a>
+        </div>
+      </section>
+    </li>
+
+
+    <li>
+      <section class="testimony">
+        <div class="testimony-author_thumb" title="Jeff Photo" style="background-image:url('images/author-1.jpg');"></div>
+        <div class="testimony-content">
+          <h3 class="testimony-title">The top 10 things you need to know</h3>
+          <p class="testimony-attribution"> By <a href="#">Jeff Mills</a>> on January 14, 2018</p>
+          <p>Chewie! Get behind me! Get behind me! Can't get out that way. Looks like you managed to cut off our only escape route. Maybe you'd like it back in your cell, Your Highness. See-Threepio! See-Threepio! Yes sir? We've been cut off! Are there any other ways out of the cell bay?</p>
+          <a href="#" class="button">Read On</a>
+        </div>
+      </section>
+    </li>
+  </ul>
+</div>
+
+
+<section class="section_hero">
+    <h2 class="section_hero-title">Contact Us</h2>
+
+    <form class="contact_form" action="#" method="post">
+      <p class="contact_form-type_label">Which best describes you?</p>
+
+      <div class="contact_form-type">
+        <input type="radio" name="type" id="contact_form-client" value="client">
+        <label for="contact_form-client"><i class="far fa-circle"></i>Client</label>
+
+        <input type="radio" name="type" id="contact_form-partner" value="partner">
+        <label for="contact_form-partner"><i class="far fa-circle"></i>Partner</label>
+
+        <input type="radio" name="type" id="contact_form-curious" value="curious">
+        <label for="contact_form-curious"><i class="far fa-circle"></i>Curious</label>
+      </div>
+
+      <input type="text" class="contact_form-name" name="name" placeholder="Your name">
+      <input type="text" class="contact_form-email" name="email" placeholder="Your Email">
+
+      <select class="contact_form-interest" name="interest">
+        <option value="">I am interested in... (please select)</option>
+        <option value="info">More information</option>
+        <option value="help">Help with a product</option>
+      </select>
+
+      <textarea class="contact_form-comment" name="comments" placeholder="Add comments here"></textarea>
+      <input type="submit" value="Send" class="contact_form-submit button">
+    </form>
+
+</section>
+
+<footer class="site_footer">
+
+    <nav class="site_footer-nav">
+        <a href="#">Home</a>
+        <a href="#">Blog</a>
+        <a href="#">Pricing</a>
+        <a href="#">Team</a>
+    </nav>
+
+    <nav class="site_footer-nav site_footer-nav--alt">
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">White Papers</a>
+        <a href="#">Account</a>
+    </nav>
+
+    <nav class="site_footer-social_nav">
+        <a href="#" target="_blank" title="Facebook Icon"><i class="fab fa-facebook-f"></i><span class="visually-hidden">Facebook</span></a>
+        <a href="#" target="_blank" title="Linkedin Icon"><i class="fab fa-linkedin-in"></i><span class="visually-hidden">linkedin</span></a>
+        <a href="#" target="_blank" title="Twitter Icon"><i class="fab fa-twitter"></i><span class="visually-hidden">twitter</span></a>
+    </nav>
+
+
+    <p class="site_footer-copyright">Copyright &copy; Pierre</p>
+    <p><i class="fas fa-phone"></i>678 456 789</p>
+    <p><i class="fas fa-address-card"></i>San Madrid Avenue - 28000 - Madrid</p>
+
+</footer>
+
+<script type="text/javascript" src="node_modules/retina.js/src/retina.js"></script> 
+
+</body>
+</html>
