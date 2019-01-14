@@ -223,7 +223,7 @@ We have a header with the following elements:
 
 ```
 LOGO                  ACCOUNT   SEARCH
-MENU                         TELEPHONE
+NAV                         TELEPHONE
 ```
 
 ```
@@ -259,7 +259,7 @@ MENU                         TELEPHONE
     margin-right: <adjust>;
   }
 
-  &-menu {
+  &-nav {
     float: left;
   }
 
@@ -277,3 +277,67 @@ Usually the order of the Header Elements would be:
  - Account Block
  - Navigation
  - Phone Number (remove from header on mobile)
+
+We add the following styles (this will need to be modified to be mobile-first!)
+
+ ```
+ .site-header {
+   $mobile-break: 670px;
+   &-top_right {
+     @include_breakpoint(max-width $mobile-break) {
+       float:none;
+       width: <adjust>;
+       margin-left: auto;
+       margin-right: auto;
+       text-align: center;
+     }
+   }
+   &-logo {
+     @include_breakpoint(max-width $mobile-break) {
+       width: <adjust>;
+       float: none;
+       margin-bottom: <adjust>;
+       margin-left: auto;
+       margin-right: auto;
+       display:block;
+     }
+     @include_breakpoint(max-width 490px) {
+       width: 100%;
+     }
+   }
+   &-phone {
+     @include breakpoint(max-width $mobile-break) {
+       float: none;
+       width: <adjust to rem>;
+       text-align: center;
+       display: block;
+       margin-left: auto;
+       margin-right: auto;
+     }
+   }
+}
+
+```
+
+## Add extra padding for mobile
+
+Don't forget that !!!
+Do it with rems!
+
+## Viewport Metatag
+
+With the [viewport](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag) metatag you can adjust how your page will be viewed on mobile devices.
+
+### Viewport Example
+
+```
+<meta name="viewport" content="width=device-width, user-scalable=no">
+```
+
+## Show Mediaqueries
+
+You can [show mediaqueries](https://www.youtube.com/watch?v=dPU5xGty0tE) in Chrome Dev Tools by checking "Show Mediaqueries" in the Device Toolbar.
+
+
+T17
+V11
