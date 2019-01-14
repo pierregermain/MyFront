@@ -51,10 +51,12 @@ module.exports = function(grunt) {
           'index.html': [filesJS, filesCSS],
         }
       }
+      prod: {
+        files: {
+          'index.html': ['js/all-js.min.js', 'css/all-css-min.css'],
+        }
+      }
     },
-
-
-
   });
 
 
@@ -66,7 +68,6 @@ module.exports = function(grunt) {
 
 
   // Default task(s).
-  //grunt.registerTask('default', ['concat:concatJS']);
-  grunt.registerTask('default', ['concat','uglify','cssmin','injector']);
-
+  grunt.registerTask('default', ['injector:dev']);
+  grunt.registerTask('prod', ['concat', 'uglify', , 'cssmin', 'injector:prod']);
 };

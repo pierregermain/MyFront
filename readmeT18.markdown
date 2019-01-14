@@ -109,6 +109,15 @@ We add the corresponding comments to our index.html
 
 We will have 2 versions of the injector, one for dev, the other for prod
 
+Now we can make 2 versions of our tasks, one for prod, the other one for dev
+
+```
+
+  grunt.registerTask('default', ['injector:dev']);
+  grunt.registerTask('prod', ['concat', 'uglify', 'autoprefixer', 'cssmin', 'injector:prod']);
+```
+
+now when you run grunt it will run the dev version, if you run grund prod it will run the prod version
 
 
 
