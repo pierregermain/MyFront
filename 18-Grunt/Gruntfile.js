@@ -15,7 +15,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     concat: {
       options: {
-        separator: ';',
+        separator: '',
       },
       // Add all Files here
       concatJS: {
@@ -45,7 +45,9 @@ module.exports = function(grunt) {
     },
 
     injector: {
-      options: {},
+      options: {
+        addRootsSlash:false,
+      },
       dev: {
         files: {
           'index.html': [filesJS, filesCSS],

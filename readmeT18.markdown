@@ -1,5 +1,8 @@
 # Optimize Front End Performance and Add Automation
 
+Please Note that the source code is in the T18 folder, but becuase yarn and grunt conflict together some libraries could be missing.
+
+If you really need a good example hace a look at the T19 folder.
 
 ## Chrome Network Tab
 
@@ -112,15 +115,25 @@ We will have 2 versions of the injector, one for dev, the other for prod
 Now we can make 2 versions of our tasks, one for prod, the other one for dev
 
 ```
-
-  grunt.registerTask('default', ['injector:dev']);
-  grunt.registerTask('prod', ['concat', 'uglify', 'autoprefixer', 'cssmin', 'injector:prod']);
+grunt.registerTask('default', ['injector:dev']);
+grunt.registerTask('prod', ['concat', 'uglify', 'autoprefixer', 'cssmin', 'injector:prod']);
 ```
 
 now when you run grunt it will run the dev version, if you run grund prod it will run the prod version
 
 
+## Add/Remove Prefixes automatically
 
+https://github.com/postcss/autoprefixer
 
-T18
-V44
+We can add prefixes with Grunt Autoprefixer.
+
+For an example have a look at the gruntfile in the T19 folder.
+
+This process will
+ - add prefixes where needed (Based on **caniuse**)
+ - remove prefixes where not needed anymore.
+
+It is really nice to see make an diff of all-css.css vs. all-css-prefixed.css
+
+What is also cool is that we can define which browsers we want to support.
