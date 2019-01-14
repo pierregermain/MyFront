@@ -50,12 +50,26 @@ This would reduce the size of the JS's from 293KB to 85KB
 
 ## Grunt
 
- - Is installed with npm
- - Has nice plugins 
+ - We should install Grunt with npm.
+ - Grunt has nice plugins that can be installded with npm.
+
+### Install Grunt in a project
+
+ - It will look for a `package.json` file
+
+To install grunt in our project just run
+
+```
+npm install grunt --save-dev
+```
+
+This will add grunt to our package.json file (in devDependencies)
+
+### Install the concatenation plugin
 
 
 
 
 
 T18
-V27
+V29
