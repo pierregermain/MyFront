@@ -65,11 +65,19 @@ npm install grunt --save-dev
 
 This will add grunt to our package.json file (in devDependencies)
 
-### Install the concatenation plugin
+### Install the grunt concatenation plugin
 
+https://github.com/gruntjs/grunt-contrib-concat
+
+## Using Grunt
+
+We use the `Gruntfile.js` to configure our grunt process.
+
+
+## Running our tasks
 
 
 
 
 T18
-V29
+V30
