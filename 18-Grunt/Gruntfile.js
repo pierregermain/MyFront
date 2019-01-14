@@ -7,13 +7,20 @@ module.exports = function(grunt) {
       options: {
         separator: ';',
       },
+      // Add all Files here
       concatJS: {
-        src: ['bower_components/jquery/dist/jquery.js','bower_components/microplugin/src/microplugin.js'],
-        dest: 'dist/built.js'
+        src: [
+          'bower_components/jquery/dist/jquery.js',
+          'bower_components/microplugin/src/microplugin.js'
+        ],
+        dest: 'js/all-js.js'
       },
       concatCSS: {
-        src: ['bower_components/jquery/dist/jquery.js','bower_components/microplugin/src/microplugin.js'],
-        dest: 'dist/built.css'
+        src: [
+          'node_modules/normalize.css/normalize.css',
+          'node_modules/@fortawesome/fontawesome-free/css/all.min.css'
+        ],
+        dest: 'css/all-css.css'
       }
     }
   });
@@ -22,7 +29,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
 
   // Default task(s).
-  grunt.registerTask('default', ['concat:concatCSS']);
-  //grunt.registerTask('default', ['concat']);
+  grunt.registerTask('default', ['concat']);
+  //grunt.registerTask('default', ['concat:concatJS']);
 
 };
